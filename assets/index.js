@@ -98,7 +98,7 @@ document.addEventListener('DOMContentLoaded', function () {
             this.order = sandwichGenerator(this.itemAmt)
             this.orderDone = true
             this.orderNumber = 0
-            this.orderPosition = orderPosition
+            this.orderPosition = orderPosition //how far along in slicing
             this.ease = ease
             this.askTime = (sliceInc * 2) * this.itemAmt            
         }   
@@ -116,6 +116,9 @@ document.addEventListener('DOMContentLoaded', function () {
                 break;
                 case 'm':
                     printMasterCue()
+                break;
+                case 's':
+                    slice()
                 break;
             }
         }
@@ -165,12 +168,15 @@ document.addEventListener('DOMContentLoaded', function () {
            // return
         }
 /**************************** 
- *  +Ceate Customer Object 
+ *  +Slice
  * ------------------------------------
- *      -takes sandwiches form master cue and assigns them to array 
- *      in customer object 
- *              customer={orderNumber: ######, order: ['','',''], ease:}
- *    
+ *      -
 ****************************/
+        function slice(){
+            console.log(`Slicing!`)
+            return true
+        }
+
+
     console.table(sandwiches)
 })
