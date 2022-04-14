@@ -81,7 +81,8 @@ document.addEventListener('DOMContentLoaded', function () {
         contents: [cheese[0],meat[1],meat[2],meat[3],meat[4],meat[5]]}
     ]
 
-    let sandwichCue = []//Full cue
+    let masterSandwichCue = []//Full cue
+    let customerLine = []
     let cueLength = 16
     let cuePosition = 0
     let tempCue = []
@@ -116,9 +117,13 @@ document.addEventListener('DOMContentLoaded', function () {
                 break;
                 case 'm':
                     printMasterCue()
+                    console.log(customerLine)
                 break;
                 case 's':
                     slice()
+                break;
+                case 'c':
+                    addToTempCue()
                 break;
             }
         }
@@ -133,7 +138,6 @@ document.addEventListener('DOMContentLoaded', function () {
             for (let i = 0;i<e; i++){
                 sandwichNum = Math.floor(Math.random() * 5) 
                 order[i] = sandwichArray[sandwichNum]
-                //console.log (sandwich+sandwichCue[i])
             }
             return order
         }
@@ -158,14 +162,24 @@ document.addEventListener('DOMContentLoaded', function () {
                 console.log(`Order#: 000${cuePosition}`)
                 console.log(newCustomer.order)
             }
-            sandwichCue.push(newCustomer.order)
+            //newCustomer.order.forEach(e => masterSandwichCue.push)
+            //Push each order item to the master cue
+            console.log(pushToCue(newCustomer.order,masterSandwichCue))
+            // console.log(`Master Cue Length: ${masterSandwichCue}`)
+            //customerLine.push(newCustomer)
         }
 
         function printMasterCue(){
-            console.log(sandwichCue)
+            console.log(masterSandwichCue)
         }
-        function checkIfOrderDone(customerOrder,mastercue){
-           // return
+        /********************
+         *    +Checks if order is completed
+         * -------------------------------------
+         *      -Returns a Boolean value after taking in Customer.order array and customer.itemAmt
+         * **********************/
+        function checkIfOrderDone(customerOrder,AmountItems){
+           
+            // return
         }
 /**************************** 
  *  +Slice
@@ -176,7 +190,18 @@ document.addEventListener('DOMContentLoaded', function () {
             console.log(`Slicing!`)
             return true
         }
-
-
+/**************************** 
+ *  +Add to tempCue
+ * ------------------------------------
+ *      -take th
+****************************/
+        function pushToCue(fromArray,toArray){
+            fromArray.forEach(e =>{
+                toArray.push(e)
+            })
+            // console.log(`Add to temp Cue!`)
+            return toArray
+        }
     console.table(sandwiches)
+    
 })

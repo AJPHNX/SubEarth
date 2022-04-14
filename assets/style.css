@@ -1,0 +1,28 @@
+#container {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: auto;
+    height: 90%;
+    padding: 1em;
+    border: 2px dotted rgb(15, 78, 253);
+    margin: auto;
+    background-color: rgb(86, 226, 43);
+    overflow: auto;
+}
+#game{
+    display: block;
+    position: relative;
+    width: 90%;
+    height: auto;
+    padding: 5em;
+    border: 2px dotted rgb(15, 78, 253);
+    margin: auto;
+    background-color: blueviolet;
+    overflow: auto;
+}
+#game img{
+     width: 100%; 
+
+}
