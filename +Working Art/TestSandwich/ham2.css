@@ -1,0 +1,130 @@
+
+#sandwichbox {
+    background-color:aquamarine;
+    border: 3px dotted blue;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    /* flex-flow: wrap; */
+    top: 0;
+    left: 0;
+    height: 500px;
+    width: 200px;
+    justify-content: center;
+    overflow: visible;
+}
+#breadTop {
+    position: absolute;
+    display: inline-flex;
+    z-index: 99; 
+    top: 0;
+    left: 45px;
+    visibility: hidden;
+}
+#turkeyLayer {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    z-index: 9;
+    top: 0px;
+    left: 15px;
+    visibility: hidden;
+}
+#turkeySlice1 {
+    position: relative;
+    top: 0;
+    padding: 0px;
+    margin: 0;
+    /* visibility: hidden; */
+}
+#turkeySlice2 {
+    position: relative;
+    display: inline-flex;
+    z-index: 6; 
+    top: -40px;
+    /* visibility: hidden; */
+}
+#turkeySlice3 {
+    position: relative;
+    display: inline-flex;
+    z-index: 7; 
+    top: -80px;
+    /* visibility: hidden; */
+}
+#hamLayer {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    z-index: 5;
+    top: 0px;
+    left: 0px;
+    /* visibility: hidden; */
+}
+#hamSlice1 {
+    position: relative;
+    top: 0;
+    padding: 0px;
+    margin: 0;
+    visibility: hidden;
+}
+#hamSlice2 {
+    position: relative;
+    display: inline-flex;
+    z-index: 6; 
+    top: -40px;
+    visibility: hidden;
+}
+#hamSlice3 {
+    position: relative;
+    display: inline-flex;
+    z-index: 7; 
+    top: -80px;
+    visibility: hidden;
+}
+#hamLayer > img{
+    height: 190px;
+    width: auto;
+}
+
+#cheeseLayer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    top: 0px;
+    left: -10px;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    /* visibility: hidden; */
+}
+#provoloneSlice1 {
+    display: inline-flex;
+    position: relative;
+    top: 0;
+    padding: 0px;
+    visibility: hidden;
+}
+#provoloneSlice2 {
+    position: relative;
+    top: -50px;
+    z-index: 3;
+    visibility: hidden;
+}
+#provoloneSlice3 {
+    position: relative;
+    top: -100px; 
+    z-index: 4;
+    visibility: hidden;
+}
+#breadBase{
+    position: absolute;
+    display: inline;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    padding: 0px;
+    height: 100%;
+    width: 100%;
+    /* visibility: hidden; */
+}

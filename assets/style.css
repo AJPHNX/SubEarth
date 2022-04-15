@@ -1,3 +1,13 @@
+h1{
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #fff;
+    /* font-family: 'Londrina Shadow', cursive; */
+    font-family: 'Modak', cursive;
+    font-size: 100px;
+    font-style: normal;
+    color: #000;
+    /* font-family: 'Roboto', sans-serif;       */
+}
 #container {
     display: inline-block;
     position: relative;
@@ -8,8 +18,18 @@
     padding: 0;
     border: 2px dotted rgb(15, 78, 253);
     margin: auto;
-    background-color: rgb(86, 226, 43);
+    background-color: rgb(44, 34, 20);
     overflow: auto;
+}
+#header{
+    display: inline;
+    position: relative;
+    top: 0;
+    justify-content: center;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    /* padding-bottom: 10px;; */
 }
 #game{
     display: inline-block;
@@ -21,7 +41,7 @@
     padding: 5em;
     border: 2px dotted rgb(15, 78, 253);
     margin: auto;
-    background-color: blueviolet;
+    background-color: rgb(249, 243, 255);
     overflow: auto;
 }
 #game img{
