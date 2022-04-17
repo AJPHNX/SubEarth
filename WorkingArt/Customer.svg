@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="173.89517mm"
+   height="306.40143mm"
+   viewBox="0 0 173.89517 306.40143"
+   version="1.1"
+   id="svg27787"
+   inkscape:version="1.1.1 (c3084ef, 2021-09-22)"
+   sodipodi:docname="Customer.svg"
+   inkscape:export-filename="/Users/ajphnx_nu/Desktop/DevPlay/FrontEnd/SubEarth/assets/images/Customer.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview27789"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.64052329"
+     inkscape:cx="127.23971"
+     inkscape:cy="504.27519"
+     inkscape:window-width="1312"
+     inkscape:window-height="950"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs27784">
+    <filter
+       inkscape:label="In and Out"
+       inkscape:menu="Shadows and Glows"
+       inkscape:menu-tooltip="Inner colorized shadow, outer black shadow"
+       style="color-interpolation-filters:sRGB"
+       id="filter10133"
+       x="-0.015164881"
+       y="-0.0084667088"
+       width="1.0382281"
+       height="1.0213432">
+      <feGaussianBlur
+         result="result0"
+         in="SourceAlpha"
+         stdDeviation="4"
+         id="feGaussianBlur10127" />
+      <feOffset
+         dx="5"
+         dy="5"
+         result="result4"
+         id="feOffset10129" />
+      <feComposite
+         in="SourceGraphic"
+         in2="result4"
+         operator="xor"
+         result="result3"
+         id="feComposite10131" />
+    </filter>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(198.90837,46.142377)">
+    <g
+       id="g28136">
+      <g
+         id="g1908"
+         transform="matrix(0.26458333,0,0,0.26458333,24.288656,48.214781)"
+         style="opacity:0.825853;fill:#00ff00;stroke:none"
+         inkscape:export-filename="/Users/ajphnx_nu/Desktop/DevPlay/FrontEnd/SubEarth/+Working Art/DrawingBoard.png"
+         inkscape:export-xdpi="96"
+         inkscape:export-ydpi="96">
+        <circle
+           style="display:inline;opacity:1;fill:#00ff00;fill-opacity:1;stroke:none;stroke-width:4.211;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:1.0752;stroke-opacity:1;paint-order:markers fill stroke;stop-color:#000000"
+           id="path39459"
+           cx="-508.29031"
+           cy="-172.34985"
+           r="174.67563" />
+        <rect
+           style="display:inline;opacity:0.81993;fill:#00ff00;fill-opacity:1;stroke:none;stroke-width:4.211;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:1.0752;stroke-opacity:1;paint-order:markers fill stroke;stop-color:#000000"
+           id="rect39529"
+           width="242.34276"
+           height="793.12177"
+           x="-629.46167"
+           y="-6.2946167"
+           ry="66.559845" />
+        <rect
+           style="display:inline;opacity:0.81993;fill:#00ff00;fill-opacity:1;stroke:none;stroke-width:2.03268;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:1.0752;stroke-opacity:1;paint-order:markers fill stroke;stop-color:#000000"
+           id="rect39529-2"
+           width="125.75928"
+           height="356.12088"
+           x="-427.513"
+           y="-48.969143"
+           ry="29.886141"
+           transform="matrix(0.97946843,-0.20159759,0.33517914,0.94215442,0,0)" />
+        <rect
+           style="display:inline;opacity:0.81993;fill:#00ff00;fill-opacity:1;stroke:none;stroke-width:2.03268;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:1.0752;stroke-opacity:1;paint-order:markers fill stroke;stop-color:#000000"
+           id="rect39529-2-6"
+           width="125.759"
+           height="356.12088"
+           x="-582.5332"
+           y="-599.45459"
+           ry="29.886141"
+           transform="matrix(0.92141157,0.38858811,0.51233832,-0.8587837,0,0)" />
+        <rect
+           style="display:inline;opacity:0.922689;fill:#00ff00;fill-opacity:1;stroke:none;stroke-width:2.03268;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:1.0752;stroke-opacity:1;paint-order:markers fill stroke;stop-color:#000000"
+           id="rect39529-2-2"
+           width="125.75928"
+           height="356.12088"
+           x="749.35541"
+           y="-611.6546"
+           ry="29.886141"
+           transform="matrix(-0.99997634,0.00687862,-0.14517051,-0.98940665,0,0)" />
+        <rect
+           style="display:inline;opacity:0.922689;fill:#00ff00;fill-opacity:1;stroke:none;stroke-width:2.03268;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:1.0752;stroke-opacity:1;paint-order:markers fill stroke;stop-color:#000000"
+           id="rect39529-2-6-9"
+           width="125.75928"
+           height="356.12088"
+           x="74.912529"
+           y="355.72861"
+           ry="29.886141"
+           transform="matrix(-0.97946843,-0.20159759,-0.33517914,0.94215442,0,0)" />
+        <circle
+           style="display:inline;opacity:1;fill:#00ff00;fill-opacity:1;stroke:none;stroke-width:4.211;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:1.0752;stroke-opacity:1;paint-order:markers fill stroke;stop-color:#000000"
+           id="path39505"
+           cx="-602.51996"
+           cy="179.8382"
+           r="75.535408"
+           transform="rotate(11.236278)" />
+        <circle
+           style="display:inline;opacity:1;fill:#00ff00;fill-opacity:1;stroke:none;stroke-width:4.211;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:1.0752;stroke-opacity:1;paint-order:markers fill stroke;stop-color:#000000"
+           id="circle39611"
+           cx="-359.29031"
+           cy="90.1558"
+           r="75.535408" />
+      </g>
+      <g
+         id="g10063"
+         transform="matrix(0.26458333,0,0,0.26458333,45.455322,48.214781)"
+         style="display:inline;opacity:0.825853;fill:#00ff00;stroke:none;filter:url(#filter10133)"
+         inkscape:export-filename="/Users/ajphnx_nu/Desktop/DevPlay/FrontEnd/SubEarth/+Working Art/DrawingBoard.png"
+         inkscape:export-xdpi="96"
+         inkscape:export-ydpi="96">
+        <circle
+           style="display:inline;opacity:1;fill:#00ff00;fill-opacity:1;stroke:none;stroke-width:4.211;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:1.0752;stroke-opacity:1;paint-order:markers fill stroke;stop-color:#000000"
+           id="circle10047"
+           cx="-588.29028"
+           cy="-172.34985"
+           r="174.67563" />
+        <rect
+           style="display:inline;opacity:0.81993;fill:#00ff00;fill-opacity:1;stroke:none;stroke-width:4.211;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:1.0752;stroke-opacity:1;paint-order:markers fill stroke;stop-color:#000000"
+           id="rect10049"
+           width="242.34276"
+           height="793.12177"
+           x="-709.46167"
+           y="-6.2946167"
+           ry="66.559845" />
+        <rect
+           style="display:inline;opacity:0.81993;fill:#00ff00;fill-opacity:1;stroke:none;stroke-width:2.03268;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:1.0752;stroke-opacity:1;paint-order:markers fill stroke;stop-color:#000000"
+           id="rect10051"
+           width="125.75928"
+           height="356.12088"
+           x="-503.61737"
+           y="-65.253578"
+           ry="29.886141"
+           transform="matrix(0.97946843,-0.20159759,0.33517914,0.94215442,0,0)" />
+        <rect
+           style="display:inline;opacity:0.81993;fill:#00ff00;fill-opacity:1;stroke:none;stroke-width:2.03268;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:1.0752;stroke-opacity:1;paint-order:markers fill stroke;stop-color:#000000"
+           id="rect10053"
+           width="125.759"
+           height="356.12088"
+           x="-651.90308"
+           y="-630.84351"
+           ry="29.886141"
+           transform="matrix(0.92141157,0.38858811,0.51233832,-0.8587837,0,0)" />
+        <rect
+           style="display:inline;opacity:0.922689;fill:#00ff00;fill-opacity:1;stroke:none;stroke-width:2.03268;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:1.0752;stroke-opacity:1;paint-order:markers fill stroke;stop-color:#000000"
+           id="rect10055"
+           width="125.75928"
+           height="356.12088"
+           x="829.27655"
+           y="-611.09894"
+           ry="29.886141"
+           transform="matrix(-0.99997634,0.00687862,-0.14517051,-0.98940665,0,0)" />
+        <rect
+           style="display:inline;opacity:0.922689;fill:#00ff00;fill-opacity:1;stroke:none;stroke-width:2.03268;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:1.0752;stroke-opacity:1;paint-order:markers fill stroke;stop-color:#000000"
+           id="rect10057"
+           width="125.75928"
+           height="356.12088"
+           x="151.01686"
+           y="372.01303"
+           ry="29.886141"
+           transform="matrix(-0.97946843,-0.20159759,-0.33517914,0.94215442,0,0)" />
+        <circle
+           style="display:inline;opacity:1;fill:#00ff00;fill-opacity:1;stroke:none;stroke-width:4.211;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:1.0752;stroke-opacity:1;paint-order:markers fill stroke;stop-color:#000000"
+           id="circle10059"
+           cx="-680.98651"
+           cy="195.42664"
+           r="75.535408"
+           transform="rotate(11.236278)" />
+        <circle
+           style="display:inline;opacity:1;fill:#00ff00;fill-opacity:1;stroke:none;stroke-width:4.211;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:1.0752;stroke-opacity:1;paint-order:markers fill stroke;stop-color:#000000"
+           id="circle10061"
+           cx="-439.29031"
+           cy="90.1558"
+           r="75.535408" />
+      </g>
+    </g>
+  </g>
+</svg>

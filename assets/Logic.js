@@ -28,6 +28,22 @@
         'Line'  for customers
 ****************************/
 document.addEventListener('DOMContentLoaded', function () {
+  //let breadToggle =
+    function eventElements(element){
+        switch(element){
+            case 'customer': askCustomer()
+            break;
+            // case 'breadBasketImg': (element)=>{
+            //     element.style.visibility ='hidden'//src="./assets/images/BreadBasketToggle.png"
+            // }
+            // break;
+        }
+    }
+    document.addEventListener('click',(e)=>{
+        element = e.srcElement.id
+        console.log(element)
+        eventElements(element)
+    })
 /**************************** 
  *   +Color Declarations
 ****************************/
@@ -142,6 +158,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 case 'a':
                     /***** Create object full of ask methods *******/
                     askCustomer()
+                    
                     /*/Menu options
                             +prepare order
                                 +Get bread
@@ -164,7 +181,10 @@ document.addEventListener('DOMContentLoaded', function () {
                     slice()
                 break;
                 case 'c':
-                    addToTempCue()
+                    // pushToCue()
+                break;
+                case 'f':
+                    fetchSandwichHtml(ham)
                 break;
             }
         }
@@ -198,6 +218,7 @@ document.addEventListener('DOMContentLoaded', function () {
             if (!newCustomer.orderDone){
                 console.log(`Order#: 000${cuePosition}`)
                 console.log(newCustomer.order)
+                pushToCue(newCustomer.order,masterSandwichCue)
             }else{
                 cuePosition ++
                 console.log(`Order#: 000${cuePosition}`)
@@ -225,6 +246,40 @@ document.addEventListener('DOMContentLoaded', function () {
            
             // return
         }
+/**************************** 
+ *  +Fetch Sandwich html info
+ * ------------------------------------
+ *      -
+****************************/  
+        async function fetchSandwichHtml(samName){
+            var iframe = document.createElement('iframe');
+            var html = await fetch(`./WorkingArt/TestSandwich/${samName}.html`);
+            iframe.src = await 'data:text/html;charset=utf-8,' + encodeURI(html);
+            console.log(html)
+        }
+/**************************** 
+ *  +Appemd Sandwich html/div
+ * ------------------------------------
+ *      -
+****************************/   
+
+/*
+const iFrames = document.querySelectorAll(".sandwich-frame")
+
+function addProvolone(){
+  iFrames.forEach(frame => {
+  if(frame.something.... check for sandwich type) {
+    const provImg = document.createElement("img")
+    provImg.setAttribute("src", "path-to-img.png")
+    frame.append(provImg)
+  }
+})
+}*/
+        
+        // document.body.appendChild(iframe);
+        // console.log('iframe.contentWindow =', iframe.contentWindow);
+
+
 /**************************** 
  *  +Slice
  * ------------------------------------

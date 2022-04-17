@@ -1,50 +1,205 @@
+body{
+    display: flex;
+    position: absolute;
+    top:0;
+    width: 100vw;
+    height: 100vh;
+    margin: auto;
+    /* overflow: scroll; */
+}
+
+#container {
+    display: inline-block;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* min-width: 800px; */
+    padding: 0;
+    border: 2px dotted rgb(15, 78, 253);
+    margin: auto;
+    background-color: rgb(255, 255, 255);
+    overflow: hidden;
+    align-content: center;
+}
+#header{
+    display: inline-flex;
+    position: relative;
+    top: 0;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    justify-content: center;
+}
 h1{
+    display: inline-flex;
+    position: relative;
+    top: -75px;
     -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: #fff;
+    -webkit-text-stroke-color: rgb(50, 18, 231);
     /* font-family: 'Londrina Shadow', cursive; */
     font-family: 'Modak', cursive;
     font-size: 100px;
     font-style: normal;
-    color: #000;
+
+    color: rgb(207, 28, 28);
+    text-shadow: 4px 4px 5px #000000;
     /* font-family: 'Roboto', sans-serif;       */
 }
-#container {
-    display: inline-block;
-    position: relative;
-    top: 0;
-    left: 0;
-    width: auto;
-    height: 90%;
-    padding: 0;
-    border: 2px dotted rgb(15, 78, 253);
-    margin: auto;
-    background-color: rgb(44, 34, 20);
-    overflow: auto;
-}
-#header{
-    display: inline;
-    position: relative;
-    top: 0;
-    justify-content: center;
-    width: 100%;
-    margin: auto;
-    text-align: center;
-    /* padding-bottom: 10px;; */
-}
-#game{
-    display: inline-block;
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 90%;
-    height: auto;
-    padding: 5em;
-    border: 2px dotted rgb(15, 78, 253);
-    margin: auto;
-    background-color: rgb(249, 243, 255);
-    overflow: auto;
-}
-#game img{
-     width: 100%; 
 
+#game {
+    display: flex;
+    position: relative;
+    bottom: 20px;
+    /* left: 0; */
+    width: 1000px;
+    height: auto;
+    padding: 0em;
+    border: 2px dotted rgb(15, 78, 253);
+    margin: auto;
+    background-color: rgb(255, 255, 255);
+    overflow: hidden;
+}
+#nextCustomerButtonImg{
+    width: 100%; 
+    height: auto;
+}
+#nextCustomerButton {
+    display: inline-flex;
+    position: absolute;
+    width: 201px;
+    /* height: auto; */
+    z-index: 7;
+    top: 165px;
+    left: -66px;
+    /* visibility: hidden; */
+}
+#sliceButtonImg{
+    width: 100%; 
+    height: auto;
+}
+#sliceButton {
+    display: inline-flex;
+    position: absolute;
+    width: 201px;
+    /* height: auto; */
+    z-index: 7;
+    top: 73px;
+    left: -66px;
+    /* visibility: hidden; */
+}
+#counterTop{
+    display: inline-flex;
+    position: absolute;
+    width: 100%;
+    height: auto;
+    z-index: 4;
+    bottom: 0px;
+}
+#timeModalImg{
+    width: 100%; 
+    height: auto;
+}
+#timeModal {
+    display: inline-flex;
+    position: absolute;
+    width: 214px;
+    /* height: auto; */
+    z-index: 7;
+    bottom: 473px;
+    right: 7px;
+    /* visibility: hidden; */
+}
+#emptyFridgeImg{
+    width: 100%; 
+    height: auto;
+}
+#emptyFridge {
+    display: inline-flex;
+    position: absolute;
+    width: 966px;
+    /* height: auto; */
+    z-index: 7;
+    bottom: -195px;
+    left: 283px;
+    /* visibility: hidden; */
+}
+#breadBasketToggleImg{
+    width: 100%; 
+    height: auto;
+}
+#breadBasketToggle {
+    display: inline-flex;
+    position: absolute;
+    width: 216px;
+    /* height: auto; */
+    z-index: 8;
+    bottom: 10px;
+    right: 32px;
+    /* visibility: hidden; */
+}
+#breadBasketImg{
+    width: 100%; 
+    height: auto;
+}
+#breadBasket {
+    display: inline-flex;
+    position: absolute;
+    width: 216px;
+    /* height: auto; */
+    z-index: 9;
+    bottom: 10px;
+    right: 32px;
+    /* visibility: hidden; */
+}
+#cueImg{
+    width: 100%; 
+    height: auto;
+}
+#emptyCue {
+    display: inline-flex;
+    position: absolute;
+    width: 665px;
+    /* height: auto; */
+    z-index: 6;
+    bottom: 6px;
+    left: 3px;
+    /* visibility: hidden; */
+}
+.cueFrame {
+    width: 75px;
+    height:100%;
+
+}
+#cueContainer{
+    display: inline-flex;
+    flex-direction: row;
+    width:665px;
+    height:300px;
+    z-index: 10;
+    visibility: hidden;
+}
+#counterImg{
+    width: 100%; 
+    height: auto;
+}
+#customer {
+    display: inline-flex;
+    position: absolute;
+    left: 113px;
+    top: 1px;
+    z-index: 1;
+    width: 254px;
+    height: auto;
+}
+#bg {
+    position: relative;
+    display: flex;
+    z-index: 0;
+}
+#bgImg{
+    width: 100%; 
+    height: auto; 
+    /* visibility: hidden; */
 }

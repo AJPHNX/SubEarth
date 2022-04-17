@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="130.43777mm"
+   height="53.259441mm"
+   viewBox="0 0 130.43777 53.259441"
+   version="1.1"
+   id="svg2316"
+   inkscape:version="1.1.1 (c3084ef, 2021-09-22)"
+   sodipodi:docname="SliceButton.svg"
+   inkscape:export-filename="/Users/ajphnx_nu/Desktop/DevPlay/FrontEnd/SubEarth/assets/images/SliceButton.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview2318"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.64052329"
+     inkscape:cx="44.494869"
+     inkscape:cy="232.6223"
+     inkscape:window-width="1312"
+     inkscape:window-height="950"
+     inkscape:window-x="14"
+     inkscape:window-y="33"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2313">
+    <filter
+       style="color-interpolation-filters:sRGB"
+       inkscape:label="Drop Shadow"
+       id="filter75169"
+       x="-0.024966307"
+       y="-0.036511493"
+       width="1.0351281"
+       height="1.1640283">
+      <feFlood
+         flood-opacity="0.498039"
+         flood-color="rgb(0,0,0)"
+         result="flood"
+         id="feFlood75159" />
+      <feComposite
+         in="flood"
+         in2="SourceGraphic"
+         operator="in"
+         result="composite1"
+         id="feComposite75161" />
+      <feGaussianBlur
+         in="composite1"
+         stdDeviation="0.600601"
+         result="blur"
+         id="feGaussianBlur75163" />
+      <feOffset
+         dx="-2.1"
+         dy="3.59281"
+         result="offset"
+         id="feOffset75165" />
+      <feComposite
+         in="SourceGraphic"
+         in2="offset"
+         operator="over"
+         result="composite2"
+         id="feComposite75167" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB"
+       inkscape:label="Drop Shadow"
+       id="filter75361"
+       x="-0.020339001"
+       y="-0.026167556"
+       width="1.0346122"
+       height="1.0713609">
+      <feFlood
+         flood-opacity="0.498039"
+         flood-color="rgb(0,0,0)"
+         result="flood"
+         id="feFlood75351" />
+      <feComposite
+         in="flood"
+         in2="SourceGraphic"
+         operator="in"
+         result="composite1"
+         id="feComposite75353" />
+      <feGaussianBlur
+         in="composite1"
+         stdDeviation="0.600601"
+         result="blur"
+         id="feGaussianBlur75355" />
+      <feOffset
+         dx="-2.1"
+         dy="3.59281"
+         result="offset"
+         id="feOffset75357" />
+      <feComposite
+         in="SourceGraphic"
+         in2="offset"
+         operator="over"
+         result="composite2"
+         id="feComposite75359" />
+    </filter>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(40.847541,-122.07681)">
+    <rect
+       style="display:inline;opacity:0.81592;fill:#ffffff;fill-opacity:1;stroke:#97a3f4;stroke-width:7;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:1.0752;stroke-opacity:1;paint-order:markers fill stroke;filter:url(#filter75361);stop-color:#000000"
+       id="rect48596"
+       width="346.20395"
+       height="188.83852"
+       x="-14.620392"
+       y="191.27194"
+       ry="94.419258"
+       transform="matrix(0.3641613,0,0,0.26325112,-32.959139,73.025102)" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;display:inline;fill:#00c7ff;fill-opacity:1;stroke:none;filter:url(#filter75169)"
+       x="45.708191"
+       y="304.77972"
+       id="text50948"
+       transform="matrix(0.26458333,0,0,0.26458333,0.2048097,72.482244)"><tspan
+         sodipodi:role="line"
+         id="tspan50946"
+         x="45.708191"
+         y="304.77972"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:53.3333px;font-family:'Arial Black';-inkscape-font-specification:'Arial Black, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#00c7ff;fill-opacity:1">Slice</tspan></text>
+  </g>
+</svg>

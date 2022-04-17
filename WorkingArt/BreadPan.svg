@@ -1,0 +1,647 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="147.80974mm"
+   height="151.48132mm"
+   viewBox="0 0 147.80974 151.48132"
+   version="1.1"
+   id="svg2880"
+   inkscape:version="1.1.1 (c3084ef, 2021-09-22)"
+   sodipodi:docname="BreadPan.svg"
+   inkscape:export-filename="/Users/ajphnx_nu/Desktop/DevPlay/FrontEnd/SubEarth/assets/images/ShiftDuration.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview2882"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.64052329"
+     inkscape:cx="245.8927"
+     inkscape:cy="393.42832"
+     inkscape:window-width="1312"
+     inkscape:window-height="950"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2877">
+    <filter
+       style="color-interpolation-filters:sRGB"
+       inkscape:label="Drop Shadow"
+       id="filter8833"
+       x="-0.01820025"
+       y="-0.13521834"
+       width="1.0316062"
+       height="1.3531686">
+      <feFlood
+         flood-opacity="0.498039"
+         flood-color="rgb(0,0,0)"
+         result="flood"
+         id="feFlood8823" />
+      <feComposite
+         in="flood"
+         in2="SourceGraphic"
+         operator="in"
+         result="composite1"
+         id="feComposite8825" />
+      <feGaussianBlur
+         in="composite1"
+         stdDeviation="2.4467254"
+         result="blur"
+         id="feGaussianBlur8827" />
+      <feOffset
+         dx="-2.1"
+         dy="3.59281"
+         result="offset"
+         id="feOffset8829" />
+      <feComposite
+         in="SourceGraphic"
+         in2="offset"
+         operator="over"
+         result="composite2"
+         id="feComposite8831" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB"
+       inkscape:label="Drop Shadow"
+       id="filter19813-9-6"
+       x="-0.095694222"
+       y="-0.02774383"
+       width="1.1789257"
+       height="1.0625965">
+      <feFlood
+         flood-opacity="0.498039"
+         flood-color="rgb(0,0,0)"
+         result="flood"
+         id="feFlood19803-8-0" />
+      <feComposite
+         in="flood"
+         in2="SourceGraphic"
+         operator="in"
+         result="composite1"
+         id="feComposite19805-5-7" />
+      <feGaussianBlur
+         in="composite1"
+         stdDeviation="3.6036"
+         result="blur"
+         id="feGaussianBlur19807-4-2" />
+      <feOffset
+         dx="-2.1"
+         dy="3.59281"
+         result="offset"
+         id="feOffset19809-9-9" />
+      <feComposite
+         in="SourceGraphic"
+         in2="offset"
+         operator="over"
+         result="composite2"
+         id="feComposite19811-0-8" />
+    </filter>
+    <inkscape:path-effect
+       effect="taper_stroke"
+       id="path-effect20441"
+       is_visible="true"
+       lpeversion="1"
+       stroke_width="9.5"
+       attach_start="0.5"
+       end_offset="1.5"
+       start_smoothing="0.9"
+       end_smoothing="1.4"
+       jointype="extrapolated"
+       start_shape="center"
+       end_shape="center"
+       miter_limit="100" />
+    <filter
+       style="color-interpolation-filters:sRGB"
+       inkscape:label="Drop Shadow"
+       id="filter3206"
+       x="-0.095694222"
+       y="-0.027743829"
+       width="1.1789258"
+       height="1.0625966">
+      <feFlood
+         flood-opacity="0.498039"
+         flood-color="rgb(0,0,0)"
+         result="flood"
+         id="feFlood3196" />
+      <feComposite
+         in="flood"
+         in2="SourceGraphic"
+         operator="in"
+         result="composite1"
+         id="feComposite3198" />
+      <feGaussianBlur
+         in="composite1"
+         stdDeviation="3.6036"
+         result="blur"
+         id="feGaussianBlur3200" />
+      <feOffset
+         dx="-2.1"
+         dy="3.59281"
+         result="offset"
+         id="feOffset3202" />
+      <feComposite
+         in="SourceGraphic"
+         in2="offset"
+         operator="over"
+         result="composite2"
+         id="feComposite3204" />
+    </filter>
+    <inkscape:path-effect
+       effect="taper_stroke"
+       id="path-effect4104"
+       is_visible="true"
+       lpeversion="1"
+       stroke_width="9.5"
+       attach_start="0.5"
+       end_offset="1.5"
+       start_smoothing="0.9"
+       end_smoothing="1.4"
+       jointype="extrapolated"
+       start_shape="center"
+       end_shape="center"
+       miter_limit="100" />
+    <filter
+       style="color-interpolation-filters:sRGB"
+       inkscape:label="Drop Shadow"
+       id="filter3219"
+       x="-0.095694222"
+       y="-0.027743829"
+       width="1.1789258"
+       height="1.0625966">
+      <feFlood
+         flood-opacity="0.498039"
+         flood-color="rgb(0,0,0)"
+         result="flood"
+         id="feFlood3209" />
+      <feComposite
+         in="flood"
+         in2="SourceGraphic"
+         operator="in"
+         result="composite1"
+         id="feComposite3211" />
+      <feGaussianBlur
+         in="composite1"
+         stdDeviation="3.6036"
+         result="blur"
+         id="feGaussianBlur3213" />
+      <feOffset
+         dx="-2.1"
+         dy="3.59281"
+         result="offset"
+         id="feOffset3215" />
+      <feComposite
+         in="SourceGraphic"
+         in2="offset"
+         operator="over"
+         result="composite2"
+         id="feComposite3217" />
+    </filter>
+    <inkscape:path-effect
+       effect="taper_stroke"
+       id="path-effect4122"
+       is_visible="true"
+       lpeversion="1"
+       stroke_width="9.5"
+       attach_start="0.5"
+       end_offset="1.5"
+       start_smoothing="0.9"
+       end_smoothing="1.4"
+       jointype="extrapolated"
+       start_shape="center"
+       end_shape="center"
+       miter_limit="100" />
+    <filter
+       style="color-interpolation-filters:sRGB"
+       inkscape:label="Drop Shadow"
+       id="filter3232"
+       x="-0.095694222"
+       y="-0.027743829"
+       width="1.1789258"
+       height="1.0625966">
+      <feFlood
+         flood-opacity="0.498039"
+         flood-color="rgb(0,0,0)"
+         result="flood"
+         id="feFlood3222" />
+      <feComposite
+         in="flood"
+         in2="SourceGraphic"
+         operator="in"
+         result="composite1"
+         id="feComposite3224" />
+      <feGaussianBlur
+         in="composite1"
+         stdDeviation="3.6036"
+         result="blur"
+         id="feGaussianBlur3226" />
+      <feOffset
+         dx="-2.1"
+         dy="3.59281"
+         result="offset"
+         id="feOffset3228" />
+      <feComposite
+         in="SourceGraphic"
+         in2="offset"
+         operator="over"
+         result="composite2"
+         id="feComposite3230" />
+    </filter>
+    <inkscape:path-effect
+       effect="taper_stroke"
+       id="path-effect4140"
+       is_visible="true"
+       lpeversion="1"
+       stroke_width="9.5"
+       attach_start="0.5"
+       end_offset="1.5"
+       start_smoothing="0.9"
+       end_smoothing="1.4"
+       jointype="extrapolated"
+       start_shape="center"
+       end_shape="center"
+       miter_limit="100" />
+    <filter
+       style="color-interpolation-filters:sRGB"
+       inkscape:label="Drop Shadow"
+       id="filter3245"
+       x="-0.095694222"
+       y="-0.027743829"
+       width="1.1789258"
+       height="1.0625966">
+      <feFlood
+         flood-opacity="0.498039"
+         flood-color="rgb(0,0,0)"
+         result="flood"
+         id="feFlood3235" />
+      <feComposite
+         in="flood"
+         in2="SourceGraphic"
+         operator="in"
+         result="composite1"
+         id="feComposite3237" />
+      <feGaussianBlur
+         in="composite1"
+         stdDeviation="3.6036"
+         result="blur"
+         id="feGaussianBlur3239" />
+      <feOffset
+         dx="-2.1"
+         dy="3.59281"
+         result="offset"
+         id="feOffset3241" />
+      <feComposite
+         in="SourceGraphic"
+         in2="offset"
+         operator="over"
+         result="composite2"
+         id="feComposite3243" />
+    </filter>
+    <inkscape:path-effect
+       effect="taper_stroke"
+       id="path-effect4158"
+       is_visible="true"
+       lpeversion="1"
+       stroke_width="9.5"
+       attach_start="0.5"
+       end_offset="1.5"
+       start_smoothing="0.9"
+       end_smoothing="1.4"
+       jointype="extrapolated"
+       start_shape="center"
+       end_shape="center"
+       miter_limit="100" />
+    <filter
+       style="color-interpolation-filters:sRGB"
+       inkscape:label="Drop Shadow"
+       id="filter3258"
+       x="-0.095694222"
+       y="-0.027743829"
+       width="1.1789258"
+       height="1.0625966">
+      <feFlood
+         flood-opacity="0.498039"
+         flood-color="rgb(0,0,0)"
+         result="flood"
+         id="feFlood3248" />
+      <feComposite
+         in="flood"
+         in2="SourceGraphic"
+         operator="in"
+         result="composite1"
+         id="feComposite3250" />
+      <feGaussianBlur
+         in="composite1"
+         stdDeviation="3.6036"
+         result="blur"
+         id="feGaussianBlur3252" />
+      <feOffset
+         dx="-2.1"
+         dy="3.59281"
+         result="offset"
+         id="feOffset3254" />
+      <feComposite
+         in="SourceGraphic"
+         in2="offset"
+         operator="over"
+         result="composite2"
+         id="feComposite3256" />
+    </filter>
+    <inkscape:path-effect
+       effect="taper_stroke"
+       id="path-effect4176"
+       is_visible="true"
+       lpeversion="1"
+       stroke_width="9.5"
+       attach_start="0.5"
+       end_offset="1.5"
+       start_smoothing="0.9"
+       end_smoothing="1.4"
+       jointype="extrapolated"
+       start_shape="center"
+       end_shape="center"
+       miter_limit="100" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-25.893544,71.67433)">
+    <g
+       id="g22211-8-1"
+       style="display:inline"
+       transform="matrix(0.26458333,0,0,0.26458333,-309.8968,-268.31953)"
+       inkscape:export-filename="/Users/ajphnx_nu/Desktop/DevPlay/FrontEnd/SubEarth/assets/images/BreadBasket.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
+      <g
+         id="g19781-3-1"
+         transform="translate(442.74503,-6.2946171)"
+         style="filter:url(#filter19813-9-6)">
+        <g
+           id="g19779-4-6">
+          <rect
+             style="display:inline;fill:#ffdbc2;fill-opacity:1;stroke:#f3a037;stroke-width:10.752;stroke-miterlimit:4;stroke-dasharray:43.008, 10.752;stroke-dashoffset:1.0752;stroke-opacity:1;paint-order:stroke markers fill;stop-color:#000000"
+             id="rect19775-2-1"
+             width="168.50171"
+             height="505.5051"
+             x="842.50848"
+             y="781.23517"
+             ry="84.250854" />
+        </g>
+      </g>
+      <path
+         style="display:inline;fill:#deaa87;fill-opacity:0.412804;fill-rule:nonzero;stroke:#eb9c74;stroke-width:2.3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:3.7;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
+         d="m 1386.8864,922.92643 c -0.7105,-39.89235 -2.8208,-60.82176 -4.7671,-73.26245 -1.8719,-11.96541 -3.279,-14.04815 -3.279,-14.04815 0,0 -0.9608,2.27184 -1.4628,14.31865 -0.4544,10.90379 -0.6735,34.99398 0.01,73.16163 0.6326,35.4088 0.9384,71.65459 1.5711,107.06339 0.9054,50.7088 1.4781,73.8067 1.0267,106.5186 -0.4248,30.9396 -2.4072,57.6878 -3.1139,67.9174 -0.8964,12.976 -1.1004,17.6805 -0.7448,18.1961 0.3557,0.5156 1.1922,-3.1663 1.9066,-6.9861 0.7145,-3.8201 1.3042,-7.7758 1.3042,-7.7758 0,0 -0.2588,3.9905 -0.4363,7.8762 -0.1775,3.8859 -0.2718,7.6692 0.1992,7.2546 0.471,-0.4147 1.5868,-5.0193 3.3626,-17.9891 1.5719,-11.4802 4.4307,-35.8057 5.5208,-68.3039 1.0412,-31.0838 0.7885,-57.9588 0.1959,-106.8462 -0.3716,-30.74977 -0.5635,-66.21894 -1.2936,-107.09487 z"
+         id="path38614-7-7-1"
+         sodipodi:nodetypes="csc"
+         inkscape:original-d="m 1378.8403,835.61583 c 3.6447,51.06198 3.5705,117.16766 4.7292,194.47457 1.3404,89.4265 1.7541,130.7515 -5.9605,192.925"
+         inkscape:path-effect="#path-effect20441" />
+      <circle
+         style="opacity:0.554348;fill:none;fill-opacity:0.981482;stroke:#eb9c74;stroke-width:2.70279;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:1.0752;paint-order:markers stroke fill;stop-color:#000000"
+         id="path21623-9-8"
+         cx="1325.8693"
+         cy="883.74896"
+         r="7.8574781" />
+      <ellipse
+         style="opacity:0.554348;fill:none;fill-opacity:1;stroke:#f4b897;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:1.0752;paint-order:markers stroke fill;stop-color:#000000"
+         id="path21625-5-1"
+         cx="1417.5571"
+         cy="1177.8212"
+         rx="7.1760273"
+         ry="8.2941723" />
+    </g>
+    <g
+       id="g4100"
+       style="display:inline"
+       transform="matrix(0.26458333,0,0,0.26458333,-262.2718,-268.31953)"
+       inkscape:export-filename="/Users/ajphnx_nu/Desktop/DevPlay/FrontEnd/SubEarth/assets/images/BreadBasket.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
+      <g
+         id="g4092"
+         transform="translate(442.74503,-6.2946171)"
+         style="filter:url(#filter19813-9-6)">
+        <g
+           id="g4090">
+          <rect
+             style="display:inline;fill:#ffdbc2;fill-opacity:1;stroke:#f3a037;stroke-width:10.752;stroke-miterlimit:4;stroke-dasharray:43.008, 10.752;stroke-dashoffset:1.0752;stroke-opacity:1;paint-order:stroke markers fill;stop-color:#000000"
+             id="rect4088"
+             width="168.50171"
+             height="505.5051"
+             x="842.50848"
+             y="781.23517"
+             ry="84.250854" />
+        </g>
+      </g>
+      <path
+         style="display:inline;fill:#deaa87;fill-opacity:0.412804;fill-rule:nonzero;stroke:#eb9c74;stroke-width:2.3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:3.7;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
+         d="m 1386.8864,922.92643 c -0.7105,-39.89235 -2.8208,-60.82176 -4.7671,-73.26245 -1.8719,-11.96541 -3.279,-14.04815 -3.279,-14.04815 0,0 -0.9608,2.27184 -1.4628,14.31865 -0.4544,10.90379 -0.6735,34.99398 0.01,73.16163 0.6326,35.4088 0.9384,71.65459 1.5711,107.06339 0.9054,50.7088 1.4781,73.8067 1.0267,106.5186 -0.4248,30.9396 -2.4072,57.6878 -3.1139,67.9174 -0.8964,12.976 -1.1004,17.6805 -0.7448,18.1961 0.3557,0.5156 1.1922,-3.1663 1.9066,-6.9861 0.7145,-3.8201 1.3042,-7.7758 1.3042,-7.7758 0,0 -0.2588,3.9905 -0.4363,7.8762 -0.1775,3.8859 -0.2718,7.6692 0.1992,7.2546 0.471,-0.4147 1.5868,-5.0193 3.3626,-17.9891 1.5719,-11.4802 4.4307,-35.8057 5.5208,-68.3039 1.0412,-31.0838 0.7885,-57.9588 0.1959,-106.8462 -0.3716,-30.74977 -0.5635,-66.21894 -1.2936,-107.09487 z"
+         id="path4094"
+         sodipodi:nodetypes="csc"
+         inkscape:original-d="m 1378.8403,835.61583 c 3.6447,51.06198 3.5705,117.16766 4.7292,194.47457 1.3404,89.4265 1.7541,130.7515 -5.9605,192.925"
+         inkscape:path-effect="#path-effect4104" />
+      <circle
+         style="opacity:0.554348;fill:none;fill-opacity:0.981482;stroke:#eb9c74;stroke-width:2.70279;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:1.0752;paint-order:markers stroke fill;stop-color:#000000"
+         id="circle4096"
+         cx="1325.8693"
+         cy="883.74896"
+         r="7.8574781" />
+      <ellipse
+         style="opacity:0.554348;fill:none;fill-opacity:1;stroke:#f4b897;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:1.0752;paint-order:markers stroke fill;stop-color:#000000"
+         id="ellipse4098"
+         cx="1417.5571"
+         cy="1177.8212"
+         rx="7.1760273"
+         ry="8.2941723" />
+    </g>
+    <g
+       id="g4118"
+       style="display:inline"
+       transform="matrix(0.26458333,0,0,0.26458333,-214.6468,-268.31953)"
+       inkscape:export-filename="/Users/ajphnx_nu/Desktop/DevPlay/FrontEnd/SubEarth/assets/images/BreadBasket.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
+      <g
+         id="g4110"
+         transform="translate(442.74503,-6.2946171)"
+         style="filter:url(#filter19813-9-6)">
+        <g
+           id="g4108">
+          <rect
+             style="display:inline;fill:#ffdbc2;fill-opacity:1;stroke:#f3a037;stroke-width:10.752;stroke-miterlimit:4;stroke-dasharray:43.008, 10.752;stroke-dashoffset:1.0752;stroke-opacity:1;paint-order:stroke markers fill;stop-color:#000000"
+             id="rect4106"
+             width="168.50171"
+             height="505.5051"
+             x="842.50848"
+             y="781.23517"
+             ry="84.250854" />
+        </g>
+      </g>
+      <path
+         style="display:inline;fill:#deaa87;fill-opacity:0.412804;fill-rule:nonzero;stroke:#eb9c74;stroke-width:2.3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:3.7;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
+         d="m 1386.8864,922.92643 c -0.7105,-39.89235 -2.8208,-60.82176 -4.7671,-73.26245 -1.8719,-11.96541 -3.279,-14.04815 -3.279,-14.04815 0,0 -0.9608,2.27184 -1.4628,14.31865 -0.4544,10.90379 -0.6735,34.99398 0.01,73.16163 0.6326,35.4088 0.9384,71.65459 1.5711,107.06339 0.9054,50.7088 1.4781,73.8067 1.0267,106.5186 -0.4248,30.9396 -2.4072,57.6878 -3.1139,67.9174 -0.8964,12.976 -1.1004,17.6805 -0.7448,18.1961 0.3557,0.5156 1.1922,-3.1663 1.9066,-6.9861 0.7145,-3.8201 1.3042,-7.7758 1.3042,-7.7758 0,0 -0.2588,3.9905 -0.4363,7.8762 -0.1775,3.8859 -0.2718,7.6692 0.1992,7.2546 0.471,-0.4147 1.5868,-5.0193 3.3626,-17.9891 1.5719,-11.4802 4.4307,-35.8057 5.5208,-68.3039 1.0412,-31.0838 0.7885,-57.9588 0.1959,-106.8462 -0.3716,-30.74977 -0.5635,-66.21894 -1.2936,-107.09487 z"
+         id="path4112"
+         sodipodi:nodetypes="csc"
+         inkscape:original-d="m 1378.8403,835.61583 c 3.6447,51.06198 3.5705,117.16766 4.7292,194.47457 1.3404,89.4265 1.7541,130.7515 -5.9605,192.925"
+         inkscape:path-effect="#path-effect4122" />
+      <circle
+         style="opacity:0.554348;fill:none;fill-opacity:0.981482;stroke:#eb9c74;stroke-width:2.70279;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:1.0752;paint-order:markers stroke fill;stop-color:#000000"
+         id="circle4114"
+         cx="1325.8693"
+         cy="883.74896"
+         r="7.8574781" />
+      <ellipse
+         style="opacity:0.554348;fill:none;fill-opacity:1;stroke:#f4b897;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:1.0752;paint-order:markers stroke fill;stop-color:#000000"
+         id="ellipse4116"
+         cx="1417.5571"
+         cy="1177.8212"
+         rx="7.1760273"
+         ry="8.2941723" />
+    </g>
+    <g
+       id="g4136"
+       style="display:inline"
+       transform="matrix(0.26458333,0,0,0.26458333,-283.43847,-268.31953)"
+       inkscape:export-filename="/Users/ajphnx_nu/Desktop/DevPlay/FrontEnd/SubEarth/assets/images/BreadBasket.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
+      <g
+         id="g4128"
+         transform="translate(442.74503,-6.2946171)"
+         style="filter:url(#filter19813-9-6)">
+        <g
+           id="g4126">
+          <rect
+             style="display:inline;fill:#ffdbc2;fill-opacity:1;stroke:#f3a037;stroke-width:10.752;stroke-miterlimit:4;stroke-dasharray:43.008, 10.752;stroke-dashoffset:1.0752;stroke-opacity:1;paint-order:stroke markers fill;stop-color:#000000"
+             id="rect4124"
+             width="168.50171"
+             height="505.5051"
+             x="842.50848"
+             y="781.23517"
+             ry="84.250854" />
+        </g>
+      </g>
+      <path
+         style="display:inline;fill:#deaa87;fill-opacity:0.412804;fill-rule:nonzero;stroke:#eb9c74;stroke-width:2.3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:3.7;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
+         d="m 1386.8864,922.92643 c -0.7105,-39.89235 -2.8208,-60.82176 -4.7671,-73.26245 -1.8719,-11.96541 -3.279,-14.04815 -3.279,-14.04815 0,0 -0.9608,2.27184 -1.4628,14.31865 -0.4544,10.90379 -0.6735,34.99398 0.01,73.16163 0.6326,35.4088 0.9384,71.65459 1.5711,107.06339 0.9054,50.7088 1.4781,73.8067 1.0267,106.5186 -0.4248,30.9396 -2.4072,57.6878 -3.1139,67.9174 -0.8964,12.976 -1.1004,17.6805 -0.7448,18.1961 0.3557,0.5156 1.1922,-3.1663 1.9066,-6.9861 0.7145,-3.8201 1.3042,-7.7758 1.3042,-7.7758 0,0 -0.2588,3.9905 -0.4363,7.8762 -0.1775,3.8859 -0.2718,7.6692 0.1992,7.2546 0.471,-0.4147 1.5868,-5.0193 3.3626,-17.9891 1.5719,-11.4802 4.4307,-35.8057 5.5208,-68.3039 1.0412,-31.0838 0.7885,-57.9588 0.1959,-106.8462 -0.3716,-30.74977 -0.5635,-66.21894 -1.2936,-107.09487 z"
+         id="path4130"
+         sodipodi:nodetypes="csc"
+         inkscape:original-d="m 1378.8403,835.61583 c 3.6447,51.06198 3.5705,117.16766 4.7292,194.47457 1.3404,89.4265 1.7541,130.7515 -5.9605,192.925"
+         inkscape:path-effect="#path-effect4140" />
+      <circle
+         style="opacity:0.554348;fill:none;fill-opacity:0.981482;stroke:#eb9c74;stroke-width:2.70279;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:1.0752;paint-order:markers stroke fill;stop-color:#000000"
+         id="circle4132"
+         cx="1325.8693"
+         cy="883.74896"
+         r="7.8574781" />
+      <ellipse
+         style="opacity:0.554348;fill:none;fill-opacity:1;stroke:#f4b897;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:1.0752;paint-order:markers stroke fill;stop-color:#000000"
+         id="ellipse4134"
+         cx="1417.5571"
+         cy="1177.8212"
+         rx="7.1760273"
+         ry="8.2941723" />
+    </g>
+    <g
+       id="g4154"
+       style="display:inline"
+       transform="matrix(0.26458333,0,0,0.26458333,-235.2843,-268.31953)"
+       inkscape:export-filename="/Users/ajphnx_nu/Desktop/DevPlay/FrontEnd/SubEarth/assets/images/BreadBasket.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
+      <g
+         id="g4146"
+         transform="translate(442.74503,-6.2946171)"
+         style="filter:url(#filter19813-9-6)">
+        <g
+           id="g4144">
+          <rect
+             style="display:inline;fill:#ffdbc2;fill-opacity:1;stroke:#f3a037;stroke-width:10.752;stroke-miterlimit:4;stroke-dasharray:43.008, 10.752;stroke-dashoffset:1.0752;stroke-opacity:1;paint-order:stroke markers fill;stop-color:#000000"
+             id="rect4142"
+             width="168.50171"
+             height="505.5051"
+             x="842.50848"
+             y="781.23517"
+             ry="84.250854" />
+        </g>
+      </g>
+      <path
+         style="display:inline;fill:#deaa87;fill-opacity:0.412804;fill-rule:nonzero;stroke:#eb9c74;stroke-width:2.3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:3.7;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
+         d="m 1386.8864,922.92643 c -0.7105,-39.89235 -2.8208,-60.82176 -4.7671,-73.26245 -1.8719,-11.96541 -3.279,-14.04815 -3.279,-14.04815 0,0 -0.9608,2.27184 -1.4628,14.31865 -0.4544,10.90379 -0.6735,34.99398 0.01,73.16163 0.6326,35.4088 0.9384,71.65459 1.5711,107.06339 0.9054,50.7088 1.4781,73.8067 1.0267,106.5186 -0.4248,30.9396 -2.4072,57.6878 -3.1139,67.9174 -0.8964,12.976 -1.1004,17.6805 -0.7448,18.1961 0.3557,0.5156 1.1922,-3.1663 1.9066,-6.9861 0.7145,-3.8201 1.3042,-7.7758 1.3042,-7.7758 0,0 -0.2588,3.9905 -0.4363,7.8762 -0.1775,3.8859 -0.2718,7.6692 0.1992,7.2546 0.471,-0.4147 1.5868,-5.0193 3.3626,-17.9891 1.5719,-11.4802 4.4307,-35.8057 5.5208,-68.3039 1.0412,-31.0838 0.7885,-57.9588 0.1959,-106.8462 -0.3716,-30.74977 -0.5635,-66.21894 -1.2936,-107.09487 z"
+         id="path4148"
+         sodipodi:nodetypes="csc"
+         inkscape:original-d="m 1378.8403,835.61583 c 3.6447,51.06198 3.5705,117.16766 4.7292,194.47457 1.3404,89.4265 1.7541,130.7515 -5.9605,192.925"
+         inkscape:path-effect="#path-effect4158" />
+      <circle
+         style="opacity:0.554348;fill:none;fill-opacity:0.981482;stroke:#eb9c74;stroke-width:2.70279;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:1.0752;paint-order:markers stroke fill;stop-color:#000000"
+         id="circle4150"
+         cx="1325.8693"
+         cy="883.74896"
+         r="7.8574781" />
+      <ellipse
+         style="opacity:0.554348;fill:none;fill-opacity:1;stroke:#f4b897;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:1.0752;paint-order:markers stroke fill;stop-color:#000000"
+         id="ellipse4152"
+         cx="1417.5571"
+         cy="1177.8212"
+         rx="7.1760273"
+         ry="8.2941723" />
+    </g>
+    <g
+       id="g4172"
+       style="display:inline"
+       transform="matrix(0.24580269,-0.09790493,0.09790493,0.24580269,-331.54267,-115.00662)"
+       inkscape:export-filename="/Users/ajphnx_nu/Desktop/DevPlay/FrontEnd/SubEarth/assets/images/BreadBasket.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
+      <g
+         id="g4164"
+         transform="translate(442.74503,-6.2946171)"
+         style="filter:url(#filter19813-9-6)">
+        <g
+           id="g4162">
+          <rect
+             style="display:inline;fill:#ffdbc2;fill-opacity:1;stroke:#f3a037;stroke-width:10.752;stroke-miterlimit:4;stroke-dasharray:43.008, 10.752;stroke-dashoffset:1.0752;stroke-opacity:1;paint-order:stroke markers fill;stop-color:#000000"
+             id="rect4160"
+             width="168.50171"
+             height="505.5051"
+             x="842.50848"
+             y="781.23517"
+             ry="84.250854" />
+        </g>
+      </g>
+      <path
+         style="display:inline;fill:#deaa87;fill-opacity:0.412804;fill-rule:nonzero;stroke:#eb9c74;stroke-width:2.3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:3.7;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
+         d="m 1386.8864,922.92643 c -0.7105,-39.89235 -2.8208,-60.82176 -4.7671,-73.26245 -1.8719,-11.96541 -3.279,-14.04815 -3.279,-14.04815 0,0 -0.9608,2.27184 -1.4628,14.31865 -0.4544,10.90379 -0.6735,34.99398 0.01,73.16163 0.6326,35.4088 0.9384,71.65459 1.5711,107.06339 0.9054,50.7088 1.4781,73.8067 1.0267,106.5186 -0.4248,30.9396 -2.4072,57.6878 -3.1139,67.9174 -0.8964,12.976 -1.1004,17.6805 -0.7448,18.1961 0.3557,0.5156 1.1922,-3.1663 1.9066,-6.9861 0.7145,-3.8201 1.3042,-7.7758 1.3042,-7.7758 0,0 -0.2588,3.9905 -0.4363,7.8762 -0.1775,3.8859 -0.2718,7.6692 0.1992,7.2546 0.471,-0.4147 1.5868,-5.0193 3.3626,-17.9891 1.5719,-11.4802 4.4307,-35.8057 5.5208,-68.3039 1.0412,-31.0838 0.7885,-57.9588 0.1959,-106.8462 -0.3716,-30.74977 -0.5635,-66.21894 -1.2936,-107.09487 z"
+         id="path4166"
+         sodipodi:nodetypes="csc"
+         inkscape:original-d="m 1378.8403,835.61583 c 3.6447,51.06198 3.5705,117.16766 4.7292,194.47457 1.3404,89.4265 1.7541,130.7515 -5.9605,192.925"
+         inkscape:path-effect="#path-effect4176" />
+      <circle
+         style="opacity:0.554348;fill:none;fill-opacity:0.981482;stroke:#eb9c74;stroke-width:2.70279;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:1.0752;paint-order:markers stroke fill;stop-color:#000000"
+         id="circle4168"
+         cx="1325.8693"
+         cy="883.74896"
+         r="7.8574781" />
+      <ellipse
+         style="opacity:0.554348;fill:none;fill-opacity:1;stroke:#f4b897;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:1.0752;paint-order:markers stroke fill;stop-color:#000000"
+         id="ellipse4170"
+         cx="1417.5571"
+         cy="1177.8212"
+         rx="7.1760273"
+         ry="8.2941723" />
+    </g>
+  </g>
+</svg>
