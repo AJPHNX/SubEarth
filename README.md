@@ -1,4 +1,3 @@
-# SubEarth (Slice)
 /**************************** 
  *  +Background
  * ------------------------------------
@@ -6,7 +5,7 @@
         -A robot crash lands on earth and has to efficiently make sandwiches to survive
             Why:Efficiency powers its core
     Goal: 
-        -Get throughh the lunch rush (sandwich cue) with the best _______ possible
+        -Get throughh the lunch rush (sandwich cue) with the best time possible
 
     Objectives:
         -slice sandwiches with similar components at the same time
