@@ -1,15 +1,15 @@
 
 #sandwichbox {
-    background-color:aquamarine;
-    border: 3px dotted blue;
+    /* background-color:aquamarine; */
+    /* border: 3px dotted blue; */
     position: absolute;
     display: flex;
     flex-direction: column;
     /* flex-flow: wrap; */
-    top: 0;
+    top: 25px;
     left: 0;
-    height: 500px;
-    width: 200px;
+    height: 180px;
+    width: 74px;
     justify-content: center;
     overflow: visible;
 }
@@ -17,17 +17,26 @@
     position: absolute;
     display: inline-flex;
     z-index: 99; 
+    width: 100%;
+    height: 100%;
     top: 0;
-    left: 45px;
+    left: 5px;
     visibility: hidden;
+}
+#sliceContainer{
+    width:100%;
+    height:80%;
 }
 #turkeyLayer {
     position: absolute;
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100%;
     z-index: 9;
-    top: 0px;
-    left: 15px;
+    top: 14px;
+    left: 0px;
     visibility: hidden;
 }
 #turkeySlice1 {
@@ -41,27 +50,31 @@
     position: relative;
     display: inline-flex;
     z-index: 6; 
-    top: -40px;
+    top: -15px;
     /* visibility: hidden; */
 }
 #turkeySlice3 {
     position: relative;
     display: inline-flex;
     z-index: 7; 
-    top: -80px;
+    top: -31px;
     /* visibility: hidden; */
 }
 #hamLayer {
     position: absolute;
     display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100%;
     flex-direction: column;
     z-index: 5;
-    top: 0px;
+    top: 24px;
     left: 0px;
     /* visibility: hidden; */
 }
 #hamSlice1 {
     position: relative;
+    /* display: inline-flex; */
     top: 0;
     padding: 0px;
     margin: 0;
@@ -71,28 +84,33 @@
     position: relative;
     display: inline-flex;
     z-index: 6; 
-    top: -40px;
+    top: -21px;
     visibility: hidden;
 }
 #hamSlice3 {
     position: relative;
     display: inline-flex;
     z-index: 7; 
-    top: -80px;
+    top: -42px;
     visibility: hidden;
 }
-#hamLayer > img{
+#hamLayer  img{
     height: 190px;
     width: auto;
 }
 
+#cheeseLayer > img{
+    height: 2000px;
+    width: auto;
+}
 #cheeseLayer {
     position: relative;
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
     z-index: 1;
-    top: 0px;
-    left: -10px;
+    top: 22px;
+    left: 0px;
     height: 100%;
     width: 100%;
     padding: 0;
@@ -107,19 +125,19 @@
 }
 #provoloneSlice2 {
     position: relative;
-    top: -50px;
+    top: -26px;
     z-index: 3;
     visibility: hidden;
 }
 #provoloneSlice3 {
     position: relative;
-    top: -100px; 
+    top: -45px; 
     z-index: 4;
     visibility: hidden;
 }
 #breadBase{
     position: absolute;
-    display: inline;
+    display: inline-flex;
     z-index: 0;
     top: 0;
     left: 0;
