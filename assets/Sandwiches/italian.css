@@ -1,0 +1,251 @@
+
+#sandwichbox {
+    /* background-color:aquamarine; */
+    /* border: 3px dotted blue; */
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    /* flex-flow: wrap; */
+    top: 25px;
+    left: 0;
+    height: 180px;
+    width: 74px;
+    justify-content: center;
+    overflow: visible;
+}
+#breadTop {
+    position: absolute;
+    display: inline-flex;
+    z-index: 99; 
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 5px;
+    visibility: hidden;
+}
+#sliceContainer{
+    width:100%;
+    height:80%;
+}
+#pepperoniLayer {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100%;
+    z-index: 9;
+    top: 20px;
+    left: 0px;
+    visibility: hidden;
+}
+#pepperoniSlice1 {
+    position: relative;
+    top: 0px;
+    padding: 0px;
+    margin: 0;
+    z-index: 5;
+    /* visibility: hidden; */
+}
+#pepperoniSlice2 {
+    position: relative;
+    display: inline-flex;
+    z-index: 6; 
+    top: -28px;
+    /* visibility: hidden; */
+}
+#pepperoniSlice3 {
+    position: relative;
+    display: inline-flex;
+    z-index: 7; 
+    top: -50px;
+    /* visibility: hidden; */
+}
+#salamiLayer {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100%;
+    z-index: 9;
+    top: 20px;
+    left: 0px;
+    visibility: hidden;
+}
+#salamiSlice1 {
+    position: relative;
+    top: 0px;
+    padding: 0px;
+    margin: 0;
+    z-index: 5;
+    /* visibility: hidden; */
+}
+#salamiSlice2 {
+    position: relative;
+    display: inline-flex;
+    z-index: 6; 
+    top: -28px;
+    /* visibility: hidden; */
+}
+#salamiSlice3 {
+    position: relative;
+    display: inline-flex;
+    z-index: 7; 
+    top: -50px;
+    /* visibility: hidden; */
+}
+#cappLayer {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100%;
+    z-index: 9;
+    top: 20px;
+    left: 0px;
+    visibility: hidden;
+}
+#cappSlice1 {
+    position: relative;
+    top: 0px;
+    padding: 0px;
+    margin: 0;
+    z-index: 5;
+    /* visibility: hidden; */
+}
+#cappSlice2 {
+    position: relative;
+    display: inline-flex;
+    z-index: 6; 
+    top: -28px;
+    /* visibility: hidden; */
+}
+#cappSlice3 {
+    position: relative;
+    display: inline-flex;
+    z-index: 7; 
+    top: -50px;
+    /* visibility: hidden; */
+}
+#proscLayer {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100%;
+    z-index: 9;
+    top: 8px;
+    left: 0px;
+    visibility: hidden;
+}
+#proscSlice1 {
+    position: relative;
+    top: 0px;
+    padding: 0px;
+    margin: 0;
+    z-index: 5;
+    /* visibility: hidden; */
+}
+#proscSlice2 {
+    position: relative;
+    display: inline-flex;
+    z-index: 6; 
+    top: -17px;
+    /* visibility: hidden; */
+}
+#proscSlice3 {
+    position: relative;
+    display: inline-flex;
+    z-index: 7; 
+    top: -35px;
+    /* visibility: hidden; */
+}
+#hamLayer {
+    position: absolute;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    z-index: 5;
+    top: 24px;
+    left: 0px;
+    /* visibility: hidden; */
+}
+#hamSlice1 {
+    position: relative;
+    /* display: inline-flex; */
+    top: 0;
+    padding: 0px;
+    margin: 0;
+    visibility: hidden;
+}
+#hamSlice2 {
+    position: relative;
+    display: inline-flex;
+    z-index: 6; 
+    top: -21px;
+    visibility: hidden;
+}
+#hamSlice3 {
+    position: relative;
+    display: inline-flex;
+    z-index: 7; 
+    top: -42px;
+    visibility: hidden;
+}
+#hamLayer  img{
+    height: 190px;
+    width: auto;
+}
+
+#cheeseLayer > img{
+    height: 2000px;
+    width: auto;
+}
+#cheeseLayer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    z-index: 1;
+    top: 22px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    /* visibility: hidden; */
+}
+#provoloneSlice1 {
+    display: inline-flex;
+    position: relative;
+    top: 0;
+    padding: 0px;
+    visibility: hidden;
+}
+#provoloneSlice2 {
+    position: relative;
+    top: -26px;
+    z-index: 3;
+    visibility: hidden;
+}
+#provoloneSlice3 {
+    position: relative;
+    top: -45px; 
+    z-index: 4;
+    visibility: hidden;
+}
+#breadBase{
+    position: absolute;
+    display: inline-flex;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    padding: 0px;
+    height: 100%;
+    width: 100%;
+    /* visibility: hidden; */
+}

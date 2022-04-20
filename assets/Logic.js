@@ -31,7 +31,14 @@ document.addEventListener('DOMContentLoaded', function () {
   //let breadToggle =
     function eventElements(element){
         switch(element){
-            case 'customer': askCustomer()
+            case 'customer': 
+            if(tempCue.length < sliceCueMax){
+                askCustomer()
+    
+            }else{
+                customerHold = true
+                console.log(`Please Hold for cue space`)
+            } 
             break;
             // case 'breadBasketImg': (element)=>{
             //     element.style.visibility ='hidden'//src="./assets/images/BreadBasketToggle.png"
@@ -84,26 +91,41 @@ document.addEventListener('DOMContentLoaded', function () {
 
     let sandwiches =[
         {name:'veggie',
-        contents: [cheese[0],cheese[1]]},
+        contents: veggie},
         {name:'turkey',
-        contents: [cheese[0],meat[0]]},
+        contents: turkey},
         {name:'ham',
-        contents: [cheese[0],meat[1]]},
+        contents: ham},
         {name:'club',
-        contents: [cheese[0],meat[0],meat[1]]},
+        contents: club},
         {name:'slamma',
-        contents: [cheese[0],meat[1],meat[2],meat[3]]},
+        contents: slamma},
         {name:'italian',
-        contents: [cheese[0],meat[1],meat[2],meat[3],meat[4],meat[5]]}
+        contents: italian}
     ]
-
+/**************************** 
+ *  +Slice Div Arrays
+****************************/
+// const provDivs = ['provoloneSlice1','provoloneSlice2','provoloneSlice3']
+// const swissDivs = ['swissSlice1','swissSlice2','swissSlice3']
+// const turkeyDivs = ['turkeySlice1','turkeySlice2','turkeySlice3']
+// const turkey2Divs = ['turkeySlice4','turkeySlice5','turkeySlice6']
+// const hamDivs = ['hamSlice1','hamSlice2','hamSlice3']
+// const ham2Divs = ['hamSlice4','hamSlice5','hamSlice6']
+// const proscDivs = ['proscSlice1','proscSlice2','proscSlice3']
+// const cappDivs = ['cappSlice1','cappSlice2','cappSlice3']
+// const salamiDivs = ['salamiSlice1','salamiSlice2','salamiSlice3']
+// const pepperoniDivs = ['pepperoniSlice1','pepperoniSlice2','pepperoniSlice3']
+// const breadTopDiv = ['breadTop']
+/*************************** */
     let masterSandwichCue = []//Full cue
     let customerLine = []
     let cueLength = 16
-    let cuePosition = 0
+    let linePosition = 0
     let tempCue = []
-    const preLoadMax = 8
+    const sliceCueMax = 8
     const orderMax = 5
+    let customerHold = false
     let workingCue = []
     let outlierNum =0
     let singleNum =0
@@ -144,7 +166,18 @@ document.addEventListener('DOMContentLoaded', function () {
             this.ease = ease
             this.askTime = (sliceInc * 2) * this.itemAmt   
             this.active = null         
-            
+       
+        }   
+    }
+/**************************** 
+ *  +Cue Sandwich Object
+****************************/
+    class Sandwich{
+        constructor(name,slcPos){
+            this.name = name
+            this.slcPos = slcPos
+            this.active = true  
+            this.complete = false  
         }   
     }
 /**************************** 
@@ -157,34 +190,29 @@ document.addEventListener('DOMContentLoaded', function () {
             switch(e.key){
                 case 'a':
                     /***** Create object full of ask methods *******/
-                    askCustomer()
-                    
-                    /*/Menu options
-                            +prepare order
-                                +Get bread
-                                +Slice bread
-                                +Go through cue
-                                    +write
-
-
-                            +ask next customer 
-                                +unti working cue is full 
-                            
-                        /*/
-
+                    if(tempCue.length < sliceCueMax){
+                        askCustomer()
+            
+                    }else{
+                        customerHold = true
+                        console.log(`Please Hold for cue space`)
+                    } 
                 break;
                 case 'm':
                     printMasterCue()
                     console.log(customerLine)
                 break;
                 case 's':
-                    slice(ham)
+                    // slice(ham)
                 break;
                 case 'c':
                     // pushToCue()
                 break;
                 case 'f':
                     fetchSandwichHtml(ham)
+                break;
+                case 't':
+                    console.log(tempCue)
                 break;
             }
         }
@@ -206,11 +234,38 @@ document.addEventListener('DOMContentLoaded', function () {
         function sandwichGenerator(e){
             let sandwichNum = 0
             let order =[]
-            for (let i = 0;i<e; i++){
-                sandwichNum = Math.floor(Math.random() * 5) 
-                order[i] = sandwichArray[sandwichNum]
-            }
+            
+                for (let i = 0;i<e; i++){
+                    customerHold = false
+                    sandwichNum = Math.floor(Math.random() * 5) //Random number Sandwich by number:array index
+                    // order[i] = sandwichArray[sandwichNum]//Array elements = array element(sandwich name) = array of sandwich elemnts by name
+                    order[i] = sandwiches[sandwichNum]
+                    tempCue.push(order[i].name)
+                    generateSandwichCue(tempCue)
+                }
+            
             return order
+        }
+/**************************** 
+ *  +Generates Sandwich Cue
+ *    
+****************************/
+        function generateSandwichCue(cue){
+            let builderPos = sliceCueMax
+            // let frames = document.querySelectorAll('iframe')
+            let frames = document.getElementsByClassName('cueFrame')
+            cue.forEach(sandwich=>{
+                let url=`./assets/Sandwiches/${sandwich}.html`
+                document.getElementById(`frame${builderPos}`).src  = url
+                
+                // let currentFrame=frames[builderPos]
+                // currentFrame.src=url
+                console.log('*****generating cue*****')
+                console.log(frames[builderPos])
+                console.log(sandwich)
+                builderPos--
+            })
+
         }
 /**************************** 
  *  +Ask for customer order
@@ -223,22 +278,24 @@ document.addEventListener('DOMContentLoaded', function () {
  *     
 ****************************/
         function askCustomer(){
-            let newCustomer = new Customer(0,cuePosition) 
+            let newCustomer = new Customer(0,linePosition) 
             console.log('Customer Asked!')
-            if (!newCustomer.orderDone){
-                console.log(`Order#: 000${cuePosition}`)
+            if (newCustomer.orderDone == false){
+                console.log(`Order#: 000${linePosition}`)
                 console.log(newCustomer.order)
                 pushToCue(newCustomer.order,masterSandwichCue)
+                
+                pushToCue(newCustomer.order,tempCue)
                 slice(newCustomer.order)
             }else{
-                cuePosition ++
-                console.log(`Order#: 000${cuePosition}`)
+                linePosition ++
+                console.log(`Order#: 000${linePosition}`)
                 console.log(newCustomer.order)
             }
             //newCustomer.order.forEach(e => masterSandwichCue.push)
             //Push each order item to the master cue
             // console.log(
-                pushToCue(newCustomer.order,masterSandwichCue)
+            pushToCue(newCustomer.order,masterSandwichCue)
                 // )
             // console.log(`Master Cue Length: ${masterSandwichCue}`)
             //customerLine.push(newCustomer)
@@ -290,56 +347,30 @@ function addProvolone(){
         // document.body.appendChild(iframe);
         // console.log('iframe.contentWindow =', iframe.contentWindow);
 
-
+        document.addEventListener('click',(e)=>{
+            element = e.srcElement.id
+            console.log(element)
+        })
 /**************************** 
  *  +Slice
  * ------------------------------------
  *      -
 ****************************/
-        // function slice(){
-        //     console.log(`Slicing!`)
-        //     return true
-        // 
-        document.addEventListener('click',(e)=>{
-            element = e.srcElement.id
-            console.log(element)
-        })
-        const provDivs = ['provoloneSlice1','provoloneSlice2','provoloneSlice3']
-        const hamDivs = ['hamSlice1','hamSlice2','hamSlice3']
-        const turkeyDivs = ['turkeySlice1','turkeySlice2','turkeySlice3']
-        const breadTopDiv = ['breadTop']
-        // async function sleep(time){
-        //     await setTimeout(()=>{},
-        //     )
-        // }
-        
-        
-        
         async function slice(objs){
-            // let currentSlice
+           
             console.log(objs)
             const promises = objs.map(async (slice,index) => {
-            // for (i = 0; i < objs.length;i++){
-                // setTimeout(()=>{
-                    // let id = objs[i]
-                    
                     await sleep(750+(index*300))
                     console.log(slice)
                     let currentSlice = document.getElementById(slice)
                     currentSlice.style.visibility ='visible'
-                    
-                    // console.log(slice)
             })
                 await Promise.all(promises)
             }
-            // })
-            
-        
         function breadfinish(){
             let breadTop = document.getElementById('breadTop')
             breadTop.style.visibility ='visible'
         }     
-
 /**************************** 
  *  +Add to tempCue
  * ------------------------------------
@@ -349,7 +380,7 @@ function addProvolone(){
             fromArray.forEach(e =>{
                 toArray.push(e)
             })
-            // console.log(`Add to temp Cue!`)
+            console.log(`Add to temp Cue!`)
             return toArray
         }
     console.table(sandwiches)
