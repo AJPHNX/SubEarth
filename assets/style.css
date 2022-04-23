@@ -31,10 +31,11 @@ body{
     flex-direction: column;
     top: 0;
     width: 100%;
+    padding-bottom: 0px;
     margin: auto;
     text-align: center;
     justify-content: center;
-    z-index:99;
+    z-index:1;
 }
 h1{
     /* display: inline-flex; */
@@ -60,7 +61,7 @@ h1{
     display: inline-flex;
     position: relative;
     width: 513px;
-    /* height: auto; */
+    height: auto;
     z-index: 6;
     top: -215px;
     margin: auto;

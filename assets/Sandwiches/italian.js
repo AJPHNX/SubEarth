@@ -3,7 +3,11 @@ document.addEventListener('click',(e)=>{
     console.log(element)
 })
 const provDivs = ['provoloneSlice1','provoloneSlice2','provoloneSlice3']
+const swissDivs = ['swissSlice1','swissSlice2','swissSlice3']
+const turkeyDivs = ['turkeySlice1','turkeySlice2','turkeySlice3']
+const turkey2Divs = ['turkeySlice4','turkeySlice5','turkeySlice6']
 const hamDivs = ['hamSlice1','hamSlice2','hamSlice3']
+const ham2Divs = ['hamSlice4','hamSlice5','hamSlice6']
 const proscDivs = ['proscSlice1','proscSlice2','proscSlice3']
 const cappDivs = ['cappSlice1','cappSlice2','cappSlice3']
 const salamiDivs = ['salamiSlice1','salamiSlice2','salamiSlice3']

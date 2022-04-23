@@ -29,27 +29,38 @@
 ****************************/
 document.addEventListener('DOMContentLoaded', function () {
   //let breadToggle =
+  let currentSliceObj
     function eventElements(element){
+    
         switch(element){
             case 'customer': 
-            if(tempCue.length < sliceCueMax){
-                askCustomer()
-    
-            }else{
-                customerHold = true
-                console.log(`Please Hold for cue space`)
-            } 
+                if(tempCue.length < sliceCueMax){
+                    askCustomer()
+                }else{
+                    customerHold = true
+                    console.log(`Please Hold for cue space`)
+                } 
             break;
-            // case 'breadBasketImg': (element)=>{
-            //     element.style.visibility ='hidden'//src="./assets/images/BreadBasketToggle.png"
-            // }
+            case 'sliceButtonImg': 
+            //needs to change to every sandwich with its index having matching content 
+                tempCue.forEach(slice(currentSliceObj))
+            break;
+            // case 'provolone': 
             // break;
         }
     }
     document.addEventListener('click',(e)=>{
-        element = e.srcElement.id
-        console.log(element)
-        eventElements(element)
+        element = e.target
+
+        if (element.classList.contains('fridgeButton')){
+            let id = element.id.split('B')
+            let button = id[0]
+            currentSliceObj = button
+            eventElements(button)
+            console.log (`###### Fridge Selection: ${button} ######`)
+        }else{eventElements(element.id)} 
+        // console.log(element.class)
+        
     })
 /**************************** 
  *   +Color Declarations
@@ -73,50 +84,92 @@ document.addEventListener('DOMContentLoaded', function () {
 //*******Customer Related Factors*******//
     let randCustFrustration = Math.floor(Math.random() * 3)//frustrational slowdown
 /**************************** 
+ *  +Slice Div Arrays
+****************************/
+const provoloneDivs = ['provoloneSlice1','provoloneSlice2','provoloneSlice3']
+const swissDivs = ['swissSlice1','swissSlice2','swissSlice3']
+const turkeyDivs = ['turkeySlice1','turkeySlice2','turkeySlice3']
+const turkey2Divs = ['turkeySlice4','turkeySlice5','turkeySlice6']
+const hamDivs = ['hamSlice1','hamSlice2','hamSlice3']
+const ham2Divs = ['hamSlice4','hamSlice5','hamSlice6']
+const prosciuttiniDivs = ['proscSlice1','proscSlice2','proscSlice3']
+const cappicolaDivs = ['cappSlice1','cappSlice2','cappSlice3']
+const salamiDivs = ['salamiSlice1','salamiSlice2','salamiSlice3']
+const pepperoniDivs = ['pepperoniSlice1','pepperoniSlice2','pepperoniSlice3']
+const breadTopDiv = ['breadTop']
+/***** */
+
+const contentDivs = {
+    provolone: provoloneDivs,
+    swiss: swissDivs,
+    turkey: turkeyDivs,
+    turkey2: turkey2Divs,
+    ham: hamDivs,
+    ham2: ham2Divs,
+    prosciuttini:prosciuttiniDivs,
+    cappicola: cappicolaDivs,
+    salami:salamiDivs,                                                    
+    pepperoni: pepperoniDivs
+}
+/************* */
+/**************************** 
  *   +Sandwich Components
 ****************************/
-    const cheese = ['provolone','swiss','american']
-    const meat = ['turkey','ham','cappicola','prosciuttini','salami','pepperoni']
+
+
+
+    const cheese = [
+        {'provolone': provoloneDivs},
+        {'swiss':swissDivs},
+        {'american':null}]
+    const meat = [
+        {'turkey':turkeyDivs},
+        {'ham':hamDivs},
+        {'ham2':ham2Divs},
+        {'cappicola':cappicolaDivs},
+        {'prosciuttini':prosciuttiniDivs},
+        {'salami':salamiDivs},
+        {'pepperoni':pepperoniDivs}]
+
+    // const cheese = [provolone,'swiss','american']
+    // const meat = ['turkey','ham','ham2','cappicola','prosciuttini','salami','pepperoni']
 /**************************** 
  *  +Sandwich Constructs
 ****************************/
     const veggie = [cheese[0],cheese[1]]
-    const turkey = [cheese[0],meat[0]]
-    const ham = [cheese[0],meat[1]]
+    const turkey = [cheese[0],meat[0],meat[0]]
+    const ham = [cheese[0],meat[1],meat[2]]
     const club = [cheese[0],meat[0],meat[1]]
-    const slamma = [cheese[0],meat[1],meat[2],meat[3]]
-    const italian = [cheese[0],meat[1],meat[2],meat[3],meat[4],meat[5]]
+    const slamma = [cheese[0],meat[1],meat[3],meat[4]]
+    const italian = [cheese[0],meat[1],meat[3],meat[4],meat[5],meat[6]]
     //const sandwichArray = ['veggie','turkey','ham','club','slamma','italian']
     const sandwichArray = [veggie,turkey,ham,club,slamma,italian]
 
-    let sandwiches =[
-        {name:'veggie',
-        contents: veggie},
-        {name:'turkey',
-        contents: turkey},
-        {name:'ham',
-        contents: ham},
-        {name:'club',
-        contents: club},
-        {name:'slamma',
-        contents: slamma},
-        {name:'italian',
-        contents: italian}
-    ]
-/**************************** 
- *  +Slice Div Arrays
-****************************/
-// const provDivs = ['provoloneSlice1','provoloneSlice2','provoloneSlice3']
-// const swissDivs = ['swissSlice1','swissSlice2','swissSlice3']
-// const turkeyDivs = ['turkeySlice1','turkeySlice2','turkeySlice3']
-// const turkey2Divs = ['turkeySlice4','turkeySlice5','turkeySlice6']
-// const hamDivs = ['hamSlice1','hamSlice2','hamSlice3']
-// const ham2Divs = ['hamSlice4','hamSlice5','hamSlice6']
-// const proscDivs = ['proscSlice1','proscSlice2','proscSlice3']
-// const cappDivs = ['cappSlice1','cappSlice2','cappSlice3']
-// const salamiDivs = ['salamiSlice1','salamiSlice2','salamiSlice3']
-// const pepperoniDivs = ['pepperoniSlice1','pepperoniSlice2','pepperoniSlice3']
-// const breadTopDiv = ['breadTop']
+    // let sandwiches =[
+    //     {name:'veggie',
+    //     contents: veggie},
+    //     {name:'turkey',
+    //     contents: turkey},
+    //     {name:'ham',
+    //     contents: ham},
+    //     {name:'club',
+    //     contents: club},
+    //     {name:'slamma',
+    //     contents: slamma},
+    //     {name:'italian',
+    //     contents: italian}
+    // ]
+    const menuConstruct ={
+        'veggie': veggie,
+        'turkey':turkey,
+        'ham':ham,
+        'club': club,
+        'slamma': slamma,
+        'italian': italian
+    }
+
+
+
 /*************************** */
     let masterSandwichCue = []//Full cue
     let customerLine = []
@@ -171,11 +224,16 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 /**************************** 
  *  +Cue Sandwich Object
+ * element passes frame
 ****************************/
     class Sandwich{
-        constructor(name,slcPos){
-            this.name = name
-            this.slcPos = slcPos
+        constructor(type,slcIndex,cuePos,element){
+            let url = `./assets/Sandwiches/${type}.html`//Figure out var it needs
+            this.type = type
+            this.content = menuConstruct[type]
+            this.url = url
+            this.slcIndex = slcIndex//Increments after each layer is complete
+            this.cuePos = cuePos
             this.active = true  
             this.complete = false  
         }   
@@ -203,7 +261,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     console.log(customerLine)
                 break;
                 case 's':
-                    // slice(ham)
+                    slice()
                 break;
                 case 'c':
                     // pushToCue()
@@ -239,8 +297,12 @@ document.addEventListener('DOMContentLoaded', function () {
                     customerHold = false
                     sandwichNum = Math.floor(Math.random() * 5) //Random number Sandwich by number:array index
                     // order[i] = sandwichArray[sandwichNum]//Array elements = array element(sandwich name) = array of sandwich elemnts by name
-                    order[i] = sandwiches[sandwichNum]
-                    tempCue.push(order[i].name)
+                    // order[i] = menuConstruct.get(sandwichNum)
+                    order[i] = Object.keys(menuConstruct)[sandwichNum]
+                    
+                    let sandwich = new Sandwich(order[i],0,tempCue.indexOf,element)
+                    console.log(`---[generating ${sandwich.type} object]---`)
+                    tempCue.push(sandwich)
                     generateSandwichCue(tempCue)
                 }
             
@@ -255,14 +317,15 @@ document.addEventListener('DOMContentLoaded', function () {
             // let frames = document.querySelectorAll('iframe')
             let frames = document.getElementsByClassName('cueFrame')
             cue.forEach(sandwich=>{
-                let url=`./assets/Sandwiches/${sandwich}.html`
-                document.getElementById(`frame${builderPos}`).src  = url
-                
+                let url=`./assets/Sandwiches/${sandwich.type}.html`
+                let currentFrame = document.getElementById(`frame${builderPos}`)
+                currentFrame.src  = url
+                console.log(`***current frame***${currentFrame.id}******`)
                 // let currentFrame=frames[builderPos]
                 // currentFrame.src=url
                 console.log('*****generating cue*****')
                 console.log(frames[builderPos])
-                console.log(sandwich)
+                // console.log(sandwich)
                 builderPos--
             })
 
@@ -283,10 +346,12 @@ document.addEventListener('DOMContentLoaded', function () {
             if (newCustomer.orderDone == false){
                 console.log(`Order#: 000${linePosition}`)
                 console.log(newCustomer.order)
+                sandwichGenerator(newCustomer.order)
+                generateSandwichCue(tempCue)
                 pushToCue(newCustomer.order,masterSandwichCue)
                 
                 pushToCue(newCustomer.order,tempCue)
-                slice(newCustomer.order)
+                // slice(newCustomer.order)
             }else{
                 linePosition ++
                 console.log(`Order#: 000${linePosition}`)
@@ -314,59 +379,47 @@ document.addEventListener('DOMContentLoaded', function () {
            
             // return
         }
-/**************************** 
- *  +Fetch Sandwich html info
- * ------------------------------------
- *      -
-****************************/  
-        async function fetchSandwichHtml(samName){
-            var iframe = document.createElement('iframe');
-            var html = await fetch(`./WorkingArt/TestSandwich/${samName}.html`);
-            iframe.src = await 'data:text/html;charset=utf-8,' + encodeURI(html);
-            console.log(html)
-        }
-/**************************** 
- *  +Appemd Sandwich html/div
- * ------------------------------------
- *      -
-****************************/   
 
-/*
-const iFrames = document.querySelectorAll(".sandwich-frame")
-
-function addProvolone(){
-  iFrames.forEach(frame => {
-  if(frame.something.... check for sandwich type) {
-    const provImg = document.createElement("img")
-    provImg.setAttribute("src", "path-to-img.png")
-    frame.append(provImg)
-  }
-})
-}*/
-        
-        // document.body.appendChild(iframe);
-        // console.log('iframe.contentWindow =', iframe.contentWindow);
-
-        document.addEventListener('click',(e)=>{
-            element = e.srcElement.id
-            console.log(element)
-        })
 /**************************** 
  *  +Slice
  * ------------------------------------
  *      -
 ****************************/
-        async function slice(objs){
-           
-            console.log(objs)
-            const promises = objs.map(async (slice,index) => {
-                    await sleep(750+(index*300))
-                    console.log(slice)
-                    let currentSlice = document.getElementById(slice)
-                    currentSlice.style.visibility ='visible'
+        async function slice(){
+            // let divIds = contentDivs[currentSliceObj]
+            // console.log(divIds)
+            const divArray = []
+            tempCue.forEach(sandwich=>{
+                sandwich.content.forEach(layer=>{
+                    layerFixins = Object.keys(layer)[sandwich.slcIndex]
+                    console.log(`layer:`)
+                    console.log(layerFixins)
+                    // if(layer == currentSliceObj){
+                    //     console.log(`Totally able to slice ${layer} with ${currentSliceObj}!`)
+                    //     // layer.forEach(slice=>{
+                    //         console.log(`Activating: ${layer}`)
+                    //         this.slcIndex++
+                    //         console.log(`Next Layer: ${this.contents[slcIndex]}`)
+                    //     // })
+                        
+                    // }else{console.log(`NOT able to slice! ${layer} with ${currentSliceObj}`)}
+
+                })
+                // console.log(`New Slice Test: ${sandwich.content}`)
+                // if (sandwich){
+                // for (){
+
+                // }
+                // }
             })
-                await Promise.all(promises)
-            }
+
+
+            // divIds.forEach(id=>{
+            //     const element =  document.getElementById(id)
+            //     console.log(element)
+            //     element.style.visibility ='visible'
+            //     })
+             }
         function breadfinish(){
             let breadTop = document.getElementById('breadTop')
             breadTop.style.visibility ='visible'
@@ -383,6 +436,6 @@ function addProvolone(){
             console.log(`Add to temp Cue!`)
             return toArray
         }
-    console.table(sandwiches)
+    // console.table(sandwiches)
     
 })
