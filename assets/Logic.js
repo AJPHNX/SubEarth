@@ -21,12 +21,27 @@
             to reask the remainder of the order, effacting your time.
 
      Technique:
+        -Load sandwich cue with as many sandwiches as possible to key is 
+        -select the item you wish to slice from the fridge
+        -Cick the 'slice' button or press the 's' key and each sandwich 
+            will be topped with the object being sliced(in the sandwiches 
+            ingredient list)
+        -You have to remember the order(to plan accordingly)of you re-ask, 
+            you run the risk of aggitating the customer
+
     
      Restrictions:
+        -Sandwichs get sliced in the order gotten
+        -All toppings must go in menue order
+        -customers come before internet orders
 
      *Additional language:
         'Cue' for sandwiches
         'Line'  for customers
+    Keys:
+    'm' - log master cue
+    's' - slice sandwich cue 
+    't' - log temporary working sandwich cue
 ****************************/
 document.addEventListener('DOMContentLoaded', function () {
   //let breadToggle =
@@ -276,7 +291,7 @@ const contentDivs = {
                     // pushToCue()
                 break;
                 case 'f':
-                    fetchSandwichHtml(ham)
+                    // fetchSandwichHtml(ham)
                 break;
                 case 't':
                     console.log(tempCue)
