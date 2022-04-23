@@ -305,7 +305,7 @@ const contentDivs = {
                     // order[i] = menuConstruct.get(sandwichNum)
                     order[i] = Object.keys(menuConstruct)[sandwichNum]
                     
-                    let sandwich = new Sandwich(order[i],1,tempCue.indexOf,element)
+                    let sandwich = new Sandwich(order[i],0,tempCue.indexOf,element)
                     console.log(`---[generating ${sandwich.type} object]---`)
                     tempCue.push(sandwich)
                     generateSandwichCue(tempCue)
