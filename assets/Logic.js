@@ -30,8 +30,9 @@
 ****************************/
 document.addEventListener('DOMContentLoaded', function () {
   //let breadToggle =
-  let currentSliceObj
+  let currentSlcObj
   let frameArray =[]
+  const orderModalDiv = document.getElementById('orderModal')
     function eventElements(element){
     
         switch(element){
@@ -45,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function () {
             break;
             case 'sliceButtonImg': 
             //needs to change to every sandwich with its index having matching content 
-                // tempCue.forEach(slice(currentSliceObj))
+                // tempCue.forEach(slice(currentSlcObj))
                 slice()
             break;
             // case 'provolone': 
@@ -56,10 +57,13 @@ document.addEventListener('DOMContentLoaded', function () {
         element = e.target
 
         if (element.classList.contains('fridgeButton')){
-            element.style.boxShadow= "white"
+            // if (element != currentSlcObj){
+                // element.style.setProperty("-webkit-filter", "drop-shadow(0px 0px 0px #000)")
+            // }else{
+                element.style.setProperty("-webkit-filter", "drop-shadow(5px 5px 5px #222)")//}
             let id = element.id.split('B')
             let button = id[0]
-            currentSliceObj = button
+            currentSlcObj = button
             eventElements(button)
             console.log (`###### Fridge Selection: ${button} ######`)
         }else{eventElements(element.id)} 
@@ -231,7 +235,7 @@ const contentDivs = {
  * element passes frame
 ****************************/
     class Sandwich{
-        constructor(type,slcIndex,frameId,element){
+        constructor(type,slcIndex,frameId){
             let url = `./assets/Sandwiches/${type}.html`//Figure out var it needs
             this.type = type
             this.content = menuConstruct[type]
@@ -290,6 +294,17 @@ const contentDivs = {
             })  
         }
 /**************************** 
+ *  +Slice Inedx Increminter
+ * ------------------------------------
+ *    
+****************************/
+        function slcIndexInc(SandwichObjArray,sliced){
+
+            SandwichObjArray.forEach(sandwich=>{
+                sandwich.slcIndex++
+            })
+        }
+/**************************** 
  *  +Generates and returns randomly selected sandwich order
  * ------------------------------------
  *    
@@ -305,7 +320,7 @@ const contentDivs = {
                     // order[i] = menuConstruct.get(sandwichNum)
                     order[i] = Object.keys(menuConstruct)[sandwichNum]
                     
-                    let sandwich = new Sandwich(order[i],0,tempCue.indexOf,element)
+                    let sandwich = new Sandwich(order[i],0,tempCue.indexOf)//,element)
                     console.log(`---[generating ${sandwich.type} object]---`)
                     tempCue.push(sandwich)
                     generateSandwichCue(tempCue)
@@ -357,6 +372,7 @@ const contentDivs = {
                 pushToCue(newCustomer.order,masterSandwichCue)
                 
                 pushToCue(newCustomer.order,tempCue)
+               
                 // slice(newCustomer.order)
             }else{
                 linePosition ++
@@ -366,6 +382,28 @@ const contentDivs = {
             //newCustomer.order.forEach(e => masterSandwichCue.push)
             //Push each order item to the master cue
             // console.log(
+            // orderModalDiv.textContent =`Current Order: ${newCustomer.order}`
+            lh =`<u>Current Order:</u>`
+            orderModalDiv.style.display = "inline"
+            let htmlList= ''
+            newCustomer.order.forEach(sandwich=>{
+               htmlList += (`<li>${sandwich}</li>`)
+            //    console.log(htmlList) 
+            })
+            htmlList = `
+            <h4>${lh}</h4>
+            <ul>${htmlList}</ul>
+            `
+
+            orderModalDiv.innerHTML = htmlList
+            document.getElementById('timeText').style.justifyContent="center"
+            document.getElementById('orderModal').style.display="inline"
+            document.getElementById('orderModal').style.flexDirection="column"
+            document.getElementById('orderModal').style.position="absolute"
+            document.getElementById('orderModal').style.top="0px"
+            document.getElementById('orderModal').style.left="140px"
+            // console.log(orderModalDiv.textContent)
+
             pushToCue(newCustomer.order,masterSandwichCue)
                 // )
             // console.log(`Master Cue Length: ${masterSandwichCue}`)
@@ -385,11 +423,11 @@ const contentDivs = {
            
             // return
         }
-    async function getId(id){
-        const currentSlice = await document.getElementById('provoloneSlice1')
-        currentSlice.style.visibility ='visible'
-        return currentSlice
-    }
+    // async function getId(id){
+    //     const currentSlice = await document.getElementById('provoloneSlice1')
+    //     currentSlice.style.visibility ='visible'
+    //     return currentSlice
+    // }
     async function layerSlice(objs){
         // let currentSlice
         // var iframe = document.getElementById('iframeId');
@@ -426,6 +464,7 @@ const contentDivs = {
                 // console.log(slice)
         })
             await Promise.all(promises)
+            
         }
 /**************************** 
  *  +Slice
@@ -438,7 +477,7 @@ const contentDivs = {
                 currentFrame.src  = url
 ****************************/
         async function slice(){
-            // let divIds = contentDivs[currentSliceObj]
+            // let divIds = contentDivs[currentSlcObj]
             // console.log(divIds)
             let divArray 
             tempCue.forEach(sandwich=>{
@@ -448,28 +487,31 @@ const contentDivs = {
                     let layerFixins =  Object.keys(layer)[currentSlcIndex]
                     console.log(`layer Fixins:`)
                     console.log(layerFixins)
-                    // layerFixins = 
+                    
                     console.log(`Intial Slice Index: ${currentSlcIndex}`)
-                    if(layerFixins == currentSliceObj){
+                    if(layerFixins == currentSlcObj){
                         
-                        console.log(`Totally able to slice [${layerFixins}] with [${currentSliceObj}]!`)
+                        console.log(`Totally able to slice [${layerFixins}] with [${currentSlcObj}]!`)
                         // layer.forEach(slice=>{
                         console.log(`Activating: ${layerFixins}`)
                         tempCue.forEach(sandwich=>{
                             //Need to send sandwich
-                            console.log('Hopefully the div array:')
+                            console.log(`Hopefully the div array at the [${sandwich.slcIndex}] index`)
                             divArray = Object.values(sandwich.content[sandwich.slcIndex])
-                            
                             console.log(divArray)
-                            // if(sandwich.content[sandwich.slcIndex]){
-                                layerSlice(divArray)//,currentSlcIndex)
+                            console.log(sandwich.content[sandwich.slcIndex])
+                            // if(sandwich.content[sandwich.slcIndex] == currentSlcObj){
+                            layerSlice(divArray)//,currentSlcIndex)
+                                
                             // }
+
                         })
+                        slcIndexInc(tempCue)
                         /******************** */
                         
                         // })
                         
-                    }else{console.log(`NOT able to slice! [${layerFixins}] with [${currentSliceObj}]`)}
+                    }else{console.log(`NOT able to slice! [${layerFixins}] with [${currentSlcObj}]`)}
                     
                     console.log(`New Slice Index: ${this.slcIndex}`)
                 })
