@@ -3,7 +3,8 @@
  * ------------------------------------
     Backstory:
         -A robot crash lands on earth and has to efficiently make sandwiches to survive
-            Why:Efficiency powers its core
+            Why:
+                Efficiency powers its core
     Goal: 
         -Get throughh the lunch rush (sandwich cue) with the best time possible
 
@@ -14,10 +15,10 @@
      Obstacles:
         - You only have space to pre-load 8 sandwiches into your cue 
         - Switching between tasks (i.e. slicing like meats and cheeses) adds to time
-        - You cam only fetch 2 loaves of bread per trip
         - Customers can have orders of random length causing you to have to re-ask 
         if it falls out of the temporary cue (for too long?)
-            -if re-asked the the 
+            -if re-asked the the customer iritability raises and after a certain point you have 
+            to reask the remainder of the order, effacting your time.
 
      Technique:
     
@@ -30,6 +31,7 @@
 document.addEventListener('DOMContentLoaded', function () {
   //let breadToggle =
   let currentSliceObj
+  let frameArray =[]
     function eventElements(element){
     
         switch(element){
@@ -43,7 +45,8 @@ document.addEventListener('DOMContentLoaded', function () {
             break;
             case 'sliceButtonImg': 
             //needs to change to every sandwich with its index having matching content 
-                tempCue.forEach(slice(currentSliceObj))
+                // tempCue.forEach(slice(currentSliceObj))
+                slice()
             break;
             // case 'provolone': 
             // break;
@@ -53,6 +56,7 @@ document.addEventListener('DOMContentLoaded', function () {
         element = e.target
 
         if (element.classList.contains('fridgeButton')){
+            element.style.boxShadow= "white"
             let id = element.id.split('B')
             let button = id[0]
             currentSliceObj = button
@@ -227,15 +231,16 @@ const contentDivs = {
  * element passes frame
 ****************************/
     class Sandwich{
-        constructor(type,slcIndex,cuePos,element){
+        constructor(type,slcIndex,frameId,element){
             let url = `./assets/Sandwiches/${type}.html`//Figure out var it needs
             this.type = type
             this.content = menuConstruct[type]
             this.url = url
             this.slcIndex = slcIndex//Increments after each layer is complete
-            this.cuePos = cuePos
+            this.frameId = frameId
             this.active = true  
             this.complete = false  
+            this.customerNumber 
         }   
     }
 /**************************** 
@@ -300,12 +305,11 @@ const contentDivs = {
                     // order[i] = menuConstruct.get(sandwichNum)
                     order[i] = Object.keys(menuConstruct)[sandwichNum]
                     
-                    let sandwich = new Sandwich(order[i],0,tempCue.indexOf,element)
+                    let sandwich = new Sandwich(order[i],1,tempCue.indexOf,element)
                     console.log(`---[generating ${sandwich.type} object]---`)
                     tempCue.push(sandwich)
                     generateSandwichCue(tempCue)
                 }
-            
             return order
         }
 /**************************** 
@@ -315,16 +319,18 @@ const contentDivs = {
         function generateSandwichCue(cue){
             let builderPos = sliceCueMax
             // let frames = document.querySelectorAll('iframe')
-            let frames = document.getElementsByClassName('cueFrame')
+            // let frames = document.getElementsByClassName('cueFrame')
             cue.forEach(sandwich=>{
                 let url=`./assets/Sandwiches/${sandwich.type}.html`
+                sandwich.frameId = `frame${builderPos}`
                 let currentFrame = document.getElementById(`frame${builderPos}`)
                 currentFrame.src  = url
-                console.log(`***current frame***${currentFrame.id}******`)
+                frameArray.push(currentFrame)
+                console.log(`***current frame***[${currentFrame.id}]******`)
                 // let currentFrame=frames[builderPos]
                 // currentFrame.src=url
                 console.log('*****generating cue*****')
-                console.log(frames[builderPos])
+                console.log(frameArray[builderPos])
                 // console.log(sandwich)
                 builderPos--
             })
@@ -370,40 +376,102 @@ const contentDivs = {
             console.log(masterSandwichCue)
             console.log(`Single:${singleNum}/Outlier:${outlierNum}`)
         }
-        /********************
-         *    +Checks if order is completed
-         * -------------------------------------
-         *      -Returns a Boolean value after taking in Customer.order array and customer.itemAmt
-         * **********************/
+/********************
+ *    +Checks if order is completed
+ * -------------------------------------
+ *      -Returns a Boolean value after taking in Customer.order array and customer.itemAmt
+ * **********************/
         function checkIfOrderDone(customerOrder,AmountItems){
            
             // return
         }
-
+    async function getId(id){
+        const currentSlice = await document.getElementById('provoloneSlice1')
+        currentSlice.style.visibility ='visible'
+        return currentSlice
+    }
+    async function layerSlice(objs){
+        // let currentSlice
+        // var iframe = document.getElementById('iframeId');
+        // var innerDoc = iframe.contentDocument || iframe.contentWindow.document;
+        let passedDivs = objs// console.log(objs)
+        const promises = objs.map(async (slice,index) => {
+        // for (i = 0; i < objs.length;i++){
+            // setTimeout(()=>{
+                // let id = objs[i]
+                
+               
+                console.log(`[[[[[[-----slicing------]]]]]]`)
+                // console.log(slice)
+                frameArray.forEach(frame=>{
+                    
+                    var innerDoc = frame.contentDocument || frame.contentWindow.document;
+                    console.log(`+++++++frame: ${innerDoc}+++++++`)
+                    passedDivs.forEach(div=>{
+                    div.forEach(actualDiv=>{
+                        console.log(`+++++++Actual Div: ${actualDiv}+++++++`)
+                        let currentSlice = innerDoc.getElementById(actualDiv)
+                        // getId(actualDiv)
+                        // const currentSlice = await document.getElementById('provoloneSlice1')//.style.visibility ='visible'
+                        // document.getElementById(currentSlice).style.visibility ='visible'
+                         sleep(700+(index*300))
+                        console.log(`Current Slice: ${currentSlice.style.visibility}`)
+                        currentSlice.style.visibility ='visible'
+                    })
+                    // generateSandwichCue(tempCue)
+                    console.log(`[[[[[[sliced]]]]]]`)
+                    
+                    })
+                })
+                // console.log(slice)
+        })
+            await Promise.all(promises)
+        }
 /**************************** 
  *  +Slice
  * ------------------------------------
  *      -
+ *          tempCue.forEach(sandwich=>{
+                let url=`./assets/Sandwiches/${sandwich.type}.html`
+                sandwich.cuePos = `frame${builderPos}`
+                let currentFrame = document.getElementById(`frame${builderPos}`)
+                currentFrame.src  = url
 ****************************/
         async function slice(){
             // let divIds = contentDivs[currentSliceObj]
             // console.log(divIds)
-            const divArray = []
+            let divArray 
             tempCue.forEach(sandwich=>{
                 sandwich.content.forEach(layer=>{
-                    layerFixins = Object.keys(layer)[sandwich.slcIndex]
-                    console.log(`layer:`)
+                
+                    let currentSlcIndex= sandwich.slcIndex
+                    let layerFixins =  Object.keys(layer)[currentSlcIndex]
+                    console.log(`layer Fixins:`)
                     console.log(layerFixins)
-                    // if(layer == currentSliceObj){
-                    //     console.log(`Totally able to slice ${layer} with ${currentSliceObj}!`)
-                    //     // layer.forEach(slice=>{
-                    //         console.log(`Activating: ${layer}`)
-                    //         this.slcIndex++
-                    //         console.log(`Next Layer: ${this.contents[slcIndex]}`)
-                    //     // })
+                    // layerFixins = 
+                    console.log(`Intial Slice Index: ${currentSlcIndex}`)
+                    if(layerFixins == currentSliceObj){
                         
-                    // }else{console.log(`NOT able to slice! ${layer} with ${currentSliceObj}`)}
-
+                        console.log(`Totally able to slice [${layerFixins}] with [${currentSliceObj}]!`)
+                        // layer.forEach(slice=>{
+                        console.log(`Activating: ${layerFixins}`)
+                        tempCue.forEach(sandwich=>{
+                            //Need to send sandwich
+                            console.log('Hopefully the div array:')
+                            divArray = Object.values(sandwich.content[sandwich.slcIndex])
+                            
+                            console.log(divArray)
+                            // if(sandwich.content[sandwich.slcIndex]){
+                                layerSlice(divArray)//,currentSlcIndex)
+                            // }
+                        })
+                        /******************** */
+                        
+                        // })
+                        
+                    }else{console.log(`NOT able to slice! [${layerFixins}] with [${currentSliceObj}]`)}
+                    
+                    console.log(`New Slice Index: ${this.slcIndex}`)
                 })
                 // console.log(`New Slice Test: ${sandwich.content}`)
                 // if (sandwich){
@@ -412,13 +480,6 @@ const contentDivs = {
                 // }
                 // }
             })
-
-
-            // divIds.forEach(id=>{
-            //     const element =  document.getElementById(id)
-            //     console.log(element)
-            //     element.style.visibility ='visible'
-            //     })
              }
         function breadfinish(){
             let breadTop = document.getElementById('breadTop')
