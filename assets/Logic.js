@@ -46,7 +46,7 @@
 document.addEventListener('DOMContentLoaded', function () {
   //let breadToggle =
   let currentSlcObj
-  let frameArray =[]
+  let frameArray = []
   const orderModalDiv = document.getElementById('orderModal')
     function eventElements(element){
     
@@ -75,12 +75,13 @@ document.addEventListener('DOMContentLoaded', function () {
             // if (element != currentSlcObj){
                 // element.style.setProperty("-webkit-filter", "drop-shadow(0px 0px 0px #000)")
             // }else{
-                element.style.setProperty("-webkit-filter", "drop-shadow(5px 5px 5px #222)")//}
+            element.style.setProperty("-webkit-filter", "drop-shadow(5px 5px 5px #222)")//}
             let id = element.id.split('B')
             let button = id[0]
             currentSlcObj = button
-            eventElements(button)
+            //eventElements(button)
             console.log (`###### Fridge Selection: ${button} ######`)
+            document.getElementById('showclickedFrideItem').innerHTML = `${currentSlcObj}`
         }else{eventElements(element.id)} 
         // console.log(element.class)
         
@@ -111,8 +112,8 @@ document.addEventListener('DOMContentLoaded', function () {
 ****************************/
 const provoloneDivs = ['provoloneSlice1','provoloneSlice2','provoloneSlice3']
 const swissDivs = ['swissSlice1','swissSlice2','swissSlice3']
-const turkeyDivs = ['turkeySlice1','turkeySlice2','turkeySlice3']
-const turkey2Divs = ['turkeySlice4','turkeySlice5','turkeySlice6']
+const turkeyDivs = ['turkeySlice1','turkeySlice2','turkeySlice3','turkeySlice4','turkeySlice5','turkeySlice6']
+//const turkey2Divs = ['turkeySlice4','turkeySlice5','turkeySlice6']
 const hamDivs = ['hamSlice1','hamSlice2','hamSlice3','hamSlice4','hamSlice5','hamSlice6']
 // const ham2Divs = ['hamSlice4','hamSlice5','hamSlice6']
 const prosciuttiniDivs = ['proscSlice1','proscSlice2','proscSlice3']
@@ -126,7 +127,7 @@ const contentDivs = {
     provolone: provoloneDivs,
     swiss: swissDivs,
     turkey: turkeyDivs,
-    turkey2: turkey2Divs,
+    // turkey2: turkey2Divs,
     ham: hamDivs,
     // ham2: ham2Divs,
     prosciuttini:prosciuttiniDivs,
@@ -138,19 +139,20 @@ const contentDivs = {
 /**************************** 
  *   +Sandwich Components
 ****************************/
-
 const shortHam = hamDivs.splice(0,3)
+const shortTurk = turkeyDivs.splice(0,3)
 
     const cheese = [
         {'provolone': provoloneDivs},
         {'swiss':swissDivs},
         {'american':null}]
     const meat = [
-        {'turkey':turkeyDivs},
-        {'ham':hamDivs},
-        {'ham2':shortHam},//ham2Divs},
-        {'cappicola':cappicolaDivs},
+        {'turkey':turkeyDivs},//Just turkey
+        {'turkey2':shortTurk},//Turkey for other sandwiches
+        {'ham':hamDivs},//Just ham
+        {'ham2':shortHam},//Ham for other sandwiches
         {'prosciuttini':prosciuttiniDivs},
+        {'cappicola':cappicolaDivs},
         {'salami':salamiDivs},
         {'pepperoni':pepperoniDivs}]
 
@@ -159,14 +161,14 @@ const shortHam = hamDivs.splice(0,3)
 /**************************** 
  *  +Sandwich Constructs
 ****************************/
-   
+    
 
     const veggie = [cheese[0],cheese[1]]
-    const turkey = [cheese[0],meat[0],meat[0]]
-    const ham = [cheese[0],meat[1]]//,meat[2]]
-    const club = [cheese[0],meat[0],meat[2]]
-    const slamma = [cheese[0],meat[2],meat[3],meat[4]]
-    const italian = [cheese[0],meat[2],meat[3],meat[4],meat[5],meat[6]]
+    const turkey = [cheese[0],meat[0]]
+    const ham = [cheese[0],meat[2]]//,meat[2]]
+    const club = [cheese[0],meat[3],meat[1]]
+    const slamma = [cheese[0],meat[3],meat[4],meat[5]]
+    const italian = [cheese[0],meat[3],meat[4],meat[5],meat[6],meat[7]]
     //const sandwichArray = ['veggie','turkey','ham','club','slamma','italian']
     const sandwichArray = [veggie,turkey,ham,club,slamma,italian]
 
@@ -193,6 +195,7 @@ const shortHam = hamDivs.splice(0,3)
         'italian': italian
     }
 /*************************** */
+    const cueFrameArray = []
     let masterSandwichCue = []//Full cue
     let customerLine = []
     let cueLength = 16
@@ -202,8 +205,8 @@ const shortHam = hamDivs.splice(0,3)
     const orderMax = 5
     let customerHold = false
     let workingCue = []
-    let outlierNum =0
-    let singleNum =0
+    let outlierNum = 0
+    let singleNum = 0
 /**************************** 
  *   +Order Control
 ****************************/
@@ -237,7 +240,7 @@ const shortHam = hamDivs.splice(0,3)
             this.order = sandwichGenerator(this.itemAmt)
             this.orderDone = true
             this.orderNumber = 0
-            this.orderPosition = orderPosition //how far along in slicing order
+            this.orderPosition = orderPosition //how far along in slicing of order
             this.ease = ease
             this.askTime = (sliceInc * 2) * this.itemAmt   
             this.active = null         
@@ -257,12 +260,32 @@ const shortHam = hamDivs.splice(0,3)
             this.slcIndex = slcIndex//Increments after each layer is complete
             this.frameId = frameId
             this.active = true  
-            this.complete = ()=>{
-                    layerSlice(breadTopDiv)
-            }
-            //false 
+            this.complete = false//()=>{
+            //         // breadFinish(this)
+            //         breadSlice(breadTopDiv)
+            // }
+            // //false 
             this.customerNumber 
             // addEventListener('click',breadSlice(breadTopDiv))
+          
+         const breadFinish = () => {
+            let breadTop = document.getElementById('breadTop')
+            breadTop.style.visibility ='visible'
+        } 
+        } 
+    }
+/**************************** 
+ *  +Cue Frame Object
+ * element passes frame
+****************************/
+    class Frame{
+        constructor(sandwich,slcIndex,arrayPos){
+            this.content = sandwich
+            this.slcIndex = slcIndex//Increments after each layer is complete
+            this.frameId = frameId 
+            this.pos = arrayPos    
+            this.active = true  
+            this.complete = ()=>{layerSlice(breadTopDiv)}
         }   
     }
 /**************************** 
@@ -309,6 +332,7 @@ const shortHam = hamDivs.splice(0,3)
         function sleep(time){
             return new Promise(resolve => {
                 setTimeout(resolve, time)
+                // setAnimationFrame instread for event loop purposes
             })  
         }
 /**************************** 
@@ -316,11 +340,14 @@ const shortHam = hamDivs.splice(0,3)
  * ------------------------------------
  *    
 ****************************/
-        function slcIndexInc(SandwichObjArray,sliced){
-            SandwichObjArray.forEach(sandwich=>{
-                sandwich.slcIndex++
-            })
-        }
+        function slcIndexInc(sandwichObj,sliced){
+            sandwichObj.slcIndex++
+            if (sandwichObj.slcIndex >= sandwichObj.length){
+                breadSlice(sandwichObj)
+            }
+            
+            }
+        
 /**************************** 
  *  +Generates and returns randomly selected sandwich order
  * ------------------------------------
@@ -333,8 +360,6 @@ const shortHam = hamDivs.splice(0,3)
                 for (let i = 0;i<e; i++){
                     customerHold = false
                     sandwichNum = Math.floor(Math.random() * 5) //Random number Sandwich by number:array index
-                    // order[i] = sandwichArray[sandwichNum]//Array elements = array element(sandwich name) = array of sandwich elemnts by name
-                    // order[i] = menuConstruct.get(sandwichNum)
                     order[i] = Object.keys(menuConstruct)[sandwichNum]
                     
                     let sandwich = new Sandwich(order[i],0,tempCue.indexOf)//,element)
@@ -360,13 +385,13 @@ const shortHam = hamDivs.splice(0,3)
                 currentFrame.src  = url
                 frameArray.push(currentFrame)
                 console.log(`***current frame***[${currentFrame.id}]******`)
-                // let currentFrame=frames[builderPos]
-                // currentFrame.src=url
                 console.log('*****generating cue*****')
-                console.log(frameArray[builderPos])
-                // console.log(sandwich)
+                
                 builderPos--
             })
+            console.log(frameArray)
+            cue = cue.reverse()
+            // slcIndex = 0
 
         }
 /**************************** 
@@ -463,114 +488,137 @@ const shortHam = hamDivs.splice(0,3)
     //         currentSlice.style.visibility ='visible'
     //     })
     // }
-    // async function getId(id){
-    //     const currentSlice = await document.getElementById('provoloneSlice1')
-    //     currentSlice.style.visibility ='visible'
-    //     return currentSlice
-    // }
-    async function layerSlice(objs){
-        // let currentSlice
-        // var iframe = document.getElementById('iframeId');
-        // var innerDoc = iframe.contentDocument || iframe.contentWindow.document;
+    
+     function breadSlice(objs){
+        
+        // let passedDivs = objs// console.log(objs)
+        if(objs.complete){
+            // const promises = objs.map(async (slice) => {
+                console.log(`[[[[[[-----Bread slicing------]]]]]]`)
+                frameArray.forEach(frame=>{
+                var innerDoc = frame.contentDocument || frame.contentWindow.document;
+                console.log(`+++++++frame: ${innerDoc}+++++++`)
+                // passedDivs.forEach( divSet=>{
+                //     divSet.forEach(async (actualDiv,index)=>{
+                //         console.log(`+++++++Actual Div: ${actualDiv}+++++++`)
+                        // let currentSlice = innerDoc.getElementById(actualDiv)
+                        let currentSlice = innerDoc.getElementById('breadTop')
+                        // await sleep(500+(index*300))
+                        console.log(`Bread Topping?:`)
+                        console.log(currentSlice)
+                        currentSlice.style.visibility ='visible'
+                    // })
+                console.log(`[[[[[[bread sliced]]]]]]`)
+                
+                })
+                
+                
+            // })
+            // await Promise.all(promises)
+        }   
+        }
+/**************************** 
+ *  +LayerSlice
+ * ------------------------------------
+ *      -Slices an array by toggling style visibility 
+ * 
+ *       
+****************************/
+
+    async function layerSlice(objs,i){
+        
         let passedDivs = objs// console.log(objs)
         const promises = objs.map(async (slice) => {
-            console.log(`[[[[[[-----slicing------]]]]]]`)
-            // console.log(slice)
-            frameArray.forEach(frame=>{
-            var innerDoc = frame.contentDocument || frame.contentWindow.document;
-            console.log(`+++++++frame: ${innerDoc}+++++++`)
-            passedDivs.forEach( divSet=>{
-            divSet.forEach(async (actualDiv,index)=>{
-                console.log(`+++++++Actual Div: ${actualDiv}+++++++`)
-
-                let currentSlice = innerDoc.getElementById(actualDiv)
-                // if(sandwich.slcIndex == sandwich.content.length){
-                //     breadfinish()
-                // }
-                // getId(actualDiv)
-                // const currentSlice = await document.getElementById('provoloneSlice1')//.style.visibility ='visible'
-                // document.getElementById(currentSlice).style.visibility ='visible'
-                await sleep(500+(index*300))
-                console.log(`Current Slice: ${currentSlice.style.visibility}`)
-                currentSlice.style.visibility ='visible'
+            console.log(`[[[[[[-----Slicing------]]]]]]${i}`)
+            console.log(objs)
+            frameArray.forEach(frame => {
+                var innerDoc = frame.contentDocument || frame.contentWindow.document;
+                console.log(`+++++++Frame Title: ${innerDoc.title} +++++++`)
+                passedDivs.forEach( divSet => {
+                    // divSet = obj.content[obj.slcIndex]
+                    //if(Object.keys(objs)[sandwich.slcIndex])
+                    divSet.forEach(async (actualDiv,index)=>{
+                        console.log(`+++++++Div Name: ${actualDiv}+++++++`)
+                        let currentSlice = innerDoc.getElementById(actualDiv)
+                        await sleep(500+(index*300))
+                        // console.log(currentSlice.style.visibility)
+                        currentSlice.style.visibility ='visible'
+                    })
+                console.log(`[[[[[[Sliced]]]]]]`)
+                
+                })
             })
-            // generateSandwichCue(tempCue)
-            console.log(`[[[[[[sliced]]]]]]`)
-            
-            })
-            })
-                // console.log(slice)
         })
             await Promise.all(promises)
             
         }
+        let layerFixinType =[]
+        let layerFixins=[]
 /**************************** 
  *  +Slice
  * ------------------------------------
  *      -
- *          tempCue.forEach(sandwich=>{
-                let url=`./assets/Sandwiches/${sandwich.type}.html`
-                sandwich.cuePos = `frame${builderPos}`
-                let currentFrame = document.getElementById(`frame${builderPos}`)
-                currentFrame.src  = url
+ *       
 ****************************/
         async function slice(){
             // let divIds = contentDivs[currentSlcObj]
             // console.log(divIds)
             let divArray 
+            let i=0
             tempCue.forEach(sandwich=>{
+                console.log(`sandwich.content:`)
+                console.log(sandwich.content)
                 sandwich.content.forEach(layer=>{
-/*************Need to do more to generate better data here************
- *  -the issue is that were getting and array of objects from menuConstruct
- * - what we need is the objects (values) the menuConstruct keys
- * 
- * **/               let currentSlcIndex= sandwich.slcIndex
-                    let layerFixins =  Object.keys(layer)[currentSlcIndex]
-                    console.log(`layer Fixins:`)
-                    console.log(layerFixins)
-/*************Need to do more to generate better data here**************/
-                    console.log(`Intial Slice Index: ${currentSlcIndex}`)
-                    if(layerFixins == currentSlcObj){
+                   console.log(`Layer Name (key/type):`)
+                   console.log( Object.keys(layer))
+
+                    // let currentSlcIndex= sandwich.slcIndex
+                    
+                    layerFixinType =  Object.keys(layer)//[sandwich.slcIndex]
+                    layerFixins = Object.values(layer)//[sandwich.slcIndex]
+                    
+                    console.log(`layer Fixins: ${layerFixins} for Sandwich:${tempCue[i].type}`)
+                    console.log(`Slice Index: ${sandwich.slcIndex}`)
+                    
+                    if( layerFixinType == currentSlcObj || layerFixinType == 'ham2' && currentSlcObj == 'ham' || layerFixinType == 'turkey2' && currentSlcObj == 'turkey' ){
                         
                         console.log(`Totally able to slice [${layerFixins}] with [${currentSlcObj}]!`)
-                        // layer.forEach(slice=>{
                         console.log(`Activating: ${layerFixins}`)
+
                         tempCue.forEach(sandwich=>{
-                        //Need to send sandwich
-                        console.log(`Hopefully the div array at the [${sandwich.slcIndex}] index`)
-                        divArray = Object.values(sandwich.content[sandwich.slcIndex])
-                        console.log(divArray)
-                        console.log(sandwich.content[sandwich.slcIndex])
-                        // if(sandwich.content[sandwich.slcIndex] == currentSlcObj){
-                        // frameArray.forEach(frame=>{
-                            layerSlice(divArray)//,currentSlcIndex) 
-                        // }) 
-                            // }
+                            console.log(`Hopefully the div array at the [${sandwich.slcIndex}] index`)
+                            divArray = Object.values(sandwich.content[sandwich.slcIndex])
+                            console.log(Object.values(sandwich.content[sandwich.slcIndex]))
+                            console.log(`Arrray of divs to be sliced: ${divArray}`)
+                            console.log(sandwich.content[sandwich.slcIndex])
+                            layerSlice(divArray,i)
+                            // slcIndexInc(sandwich)
                         })
-                        slcIndexInc(tempCue)
-                        if(sandwich.slcIndex == sandwich.content.length){
-                            breadfinish()
-                        }
-                        /******************** */
-                        
-                        // })
-                        
+                        slcIndexInc(sandwich)
+                        console.log(`New sandwich Slice Index: ${sandwich.slcIndex}`)
+                        layerFixinType =  Object.keys(layer)[sandwich.slcIndex]
+                        layerFixins = Object.values(layer)[sandwich.slcIndex]
+                        // layerFixins =  Object.keys(layer)[sandwich.slcIndex]
+                        if(sandwich.slcIndex >= sandwich.content.length){
+                            // breadfinish(sandwich)
+                            sandwich.complete = true
+                            sleep(5000)
+                            breadSlice(sandwich)
+                            console.log('Sandwich Done...?')
+                            removeFromCue(sandwich)
+                            // tempCue.splice(i, 1); 
+                            // let breadTop = document.getElementById('breadTop')
+                            // breadTop.style.visibility ='visible' 
+                        }  
                     }else{console.log(`NOT able to slice! [${layerFixins}] with [${currentSlcObj}]`)}
                     
-                    console.log(`New sandwich Slice Index: ${sandwich.slcIndex}`)
+                    
                 })
-                // console.log(`New Slice Test: ${sandwich.content}`)
-                // if (sandwich){
-                // for (){
-
-                // }
-                // }
+                i++
+               
             })
-             }
-        function breadfinish(){
-            let breadTop = document.getElementById('breadTop')
-            breadTop.style.visibility ='visible'
-        }     
+    }
+      
 /**************************** 
  *  +Add to tempCue
  * ------------------------------------
@@ -583,6 +631,18 @@ const shortHam = hamDivs.splice(0,3)
             console.log(`Add to temp Cue!`)
             return toArray
         }
-    // console.table(sandwiches)
+/**************************** 
+ *  +Remove from tempCue
+ * ------------------------------------
+ *      -take the
+****************************/
+        function removeFromCue(fromArray,index){
+            fromArray.forEach(e =>{
+                toArray.push(e)
+            })
+            console.log(`Add to temp Cue!`)
+            return toArray
+        }
+
     
 })

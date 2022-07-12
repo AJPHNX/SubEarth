@@ -189,6 +189,7 @@ document.addEventListener('DOMContentLoaded', function () {
         function slice(){
             console.log(`Slicing!`)
             return true
+            
         }
 /**************************** 
  *  +Add to tempCue

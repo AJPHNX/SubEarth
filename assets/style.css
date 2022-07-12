@@ -44,7 +44,7 @@ h1{
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: rgb(50, 18, 231);
     /* font-family: 'Londrina Shadow', cursive; */
-    font-family: 'Modak', cursive;
+    font-family: 'Modak';
     font-size: 100px;
     font-style: normal;
 
@@ -156,10 +156,23 @@ h1{
     right: 72px;
     text-align: center;
 }
+#showclickedFrideItem{
+    position: absolute;
+    color: #fff;
+    /* box-shadow:  #000000 ; */
+    background-color: #2830a1;
+    border-radius: 25%;
+    padding: 10px;
+    top: 35px;
+    left: 103px;
+    z-index: 20;
+
+}
 #emptyFridgeImg{
     width: 100%; 
     height: auto;
 }
+
 #emptyFridge {
     display: inline-flex;
     position: absolute;
