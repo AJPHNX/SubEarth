@@ -383,11 +383,24 @@ h1{
     width: 120%;
     height: auto;
 }
+.cueFrame .ingredient.ingredient-meat img {
+    left: -3%;
+    top: 5%;
+    width: 106%;
+}
+
 .cueFrame .ingredient img:nth-child(2) {
     top: 28%;
 }
 .cueFrame .ingredient img:nth-child(3) {
     top: 56%;
+}
+
+.cueFrame .ingredient.ingredient-meat img:nth-child(2) {
+    top: 33%;
+}
+.cueFrame .ingredient.ingredient-meat img:nth-child(3) {
+    top: 60%;
 }
 
 #cueContainer{

@@ -155,7 +155,7 @@ const ingredientsDb = [
 
 const createIngredient = ingredientObj => {
     const ingredient = document.createElement('div')
-    ingredient.classList.add('ingredient', `ingredient-${ingredientObj.slug}`)
+    ingredient.classList.add('ingredient', `ingredient-${ingredientObj.slug}`, `ingredient-${ingredientObj.type}`)
     let i = 0
     do {
         const ingredientImage = document.createElement('img')
@@ -175,8 +175,13 @@ ingredientsDb.forEach( ingredient => {
     ingredients[ingredient.id].element = createIngredient(ingredient)
 })
 
-console.log(ingredients)
-let activeIngredient = undefined // set this to switch when clicking on an ingredient
+// set this to switch when clicking on an ingredient
+let activeIngredient = undefined
+let userScore = {
+    points: 0,
+    sandwiches: 0,
+    customerSatisfaction: '???'
+}
 
 const breadBase = document.createElement('img')
 breadBase.classList.add('bread-base')
@@ -186,9 +191,14 @@ const breadTop = document.createElement('img')
 breadTop.classList.add('bread-top')
 breadTop.src = './assets/Sandwiches/images/BreadTop.png'
 
+const breadBasket = document.getElementById('breadBasketImg')
+
 let currentSandwich = []
 
 document.addEventListener('DOMContentLoaded', function () {
+
+    // NOTE: You'll need to switch things out or find the next cue down the line.
+    let currentCue = document.getElementById('frame8')
 
     // Create Menu
     const menuBoard = document.getElementById('menuBoard')
@@ -210,6 +220,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Create Ingredients
     const fridgeCheeses = document.getElementById('fridgeCheeses')
     const fridgeMeats = document.getElementById('fridgeMeats')
+
     Object.keys(ingredients).forEach( ingredientId => {
         const ingredient = ingredients[ingredientId]
         const fridgeItem = document.createElement('div')
@@ -239,7 +250,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const orderModalDiv = document.getElementById('orderModal')
 
     function eventElements(element){
-
+        console.log(element)
         switch(element){
             case 'customer':
                 if(tempCue.length < sliceCueMax){
@@ -254,9 +265,26 @@ document.addEventListener('DOMContentLoaded', function () {
                 // tempCue.forEach(slice(currentSlcObj))
                 slice()
             break;
+            case 'breadBasketImg':
+                currentCue.append(breadTop)
+                // NOTE: sandwich concluded! Find the score
+                calculateScore()
+            break;
             // case 'provolone':
             // break;
         }
+    }
+
+    const calculateScore = () => {
+        // compare currentSandwich array to tempCue array at index of currently completed sandwich
+        console.group('SCORE THE SANDWICH')
+        console.log(tempCue)
+        console.log(currentSandwich)
+        console.groupEnd();
+        // NOTE: the other way we could do this would be to build an array of objects
+        // with the same number of sandwiches as are in the temp cue.
+        // Then, when the bread top is added to the last sandwich (order complete),
+        // we compare all USER sandwiches with TEMP CUE sandwiches
     }
 
     document.addEventListener('click',(e)=>{
@@ -299,40 +327,40 @@ document.addEventListener('DOMContentLoaded', function () {
     const breadGrabTIme = sliceInc * 1.7//time it takes to grab bread from the rack
 //*******Customer Related Factors*******//
     let randCustFrustration = Math.floor(Math.random() * 3)//frustrational slowdown
-/****************************
- *  +Slice Div Arrays
-****************************/
-const provoloneDivs = ['provoloneSlice1','provoloneSlice2','provoloneSlice3']
-const swissDivs = ['swissSlice1','swissSlice2','swissSlice3']
-const turkeyDivs = ['turkeySlice1','turkeySlice2','turkeySlice3','turkeySlice4','turkeySlice5','turkeySlice6']
-//const turkey2Divs = ['turkeySlice4','turkeySlice5','turkeySlice6']
-const hamDivs = ['hamSlice1','hamSlice2','hamSlice3','hamSlice4','hamSlice5','hamSlice6']
-// const ham2Divs = ['hamSlice4','hamSlice5','hamSlice6']
-const prosciuttiniDivs = ['proscSlice1','proscSlice2','proscSlice3']
-const cappicolaDivs = ['cappSlice1','cappSlice2','cappSlice3']
-const salamiDivs = ['salamiSlice1','salamiSlice2','salamiSlice3']
-const pepperoniDivs = ['pepperoniSlice1','pepperoniSlice2','pepperoniSlice3']
-const breadTopDiv = ['breadTop']
-/***** */
+    /****************************
+     *  +Slice Div Arrays
+    ****************************/
+    const provoloneDivs = ['provoloneSlice1','provoloneSlice2','provoloneSlice3']
+    const swissDivs = ['swissSlice1','swissSlice2','swissSlice3']
+    const turkeyDivs = ['turkeySlice1','turkeySlice2','turkeySlice3','turkeySlice4','turkeySlice5','turkeySlice6']
+    //const turkey2Divs = ['turkeySlice4','turkeySlice5','turkeySlice6']
+    const hamDivs = ['hamSlice1','hamSlice2','hamSlice3','hamSlice4','hamSlice5','hamSlice6']
+    // const ham2Divs = ['hamSlice4','hamSlice5','hamSlice6']
+    const prosciuttiniDivs = ['proscSlice1','proscSlice2','proscSlice3']
+    const cappicolaDivs = ['cappSlice1','cappSlice2','cappSlice3']
+    const salamiDivs = ['salamiSlice1','salamiSlice2','salamiSlice3']
+    const pepperoniDivs = ['pepperoniSlice1','pepperoniSlice2','pepperoniSlice3']
+    const breadTopDiv = ['breadTop']
+    /***** */
 
-const contentDivs = {
-    provolone: provoloneDivs,
-    swiss: swissDivs,
-    turkey: turkeyDivs,
-    // turkey2: turkey2Divs,
-    ham: hamDivs,
-    // ham2: ham2Divs,
-    prosciuttini:prosciuttiniDivs,
-    cappicola: cappicolaDivs,
-    salami:salamiDivs,
-    pepperoni: pepperoniDivs
-}
-/************* */
-/****************************
- *   +Sandwich Components
-****************************/
-const shortHam = hamDivs.splice(0,3)
-const shortTurk = turkeyDivs.splice(0,3)
+    const contentDivs = {
+        provolone: provoloneDivs,
+        swiss: swissDivs,
+        turkey: turkeyDivs,
+        // turkey2: turkey2Divs,
+        ham: hamDivs,
+        // ham2: ham2Divs,
+        prosciuttini:prosciuttiniDivs,
+        cappicola: cappicolaDivs,
+        salami:salamiDivs,
+        pepperoni: pepperoniDivs
+    }
+    /************* */
+    /****************************
+     *   +Sandwich Components
+    ****************************/
+    const shortHam = hamDivs.splice(0,3)
+    const shortTurk = turkeyDivs.splice(0,3)
 
     const cheese = [
         {'provolone': provoloneDivs},
@@ -760,12 +788,11 @@ const shortTurk = turkeyDivs.splice(0,3)
  *
 ****************************/
         async function slice () {
-            // You'll need to switch things out or find the next cue down the line.
-            const currentFrame = document.getElementById('frame8')
+
             // Add the users selected ingredient to the current sandwich array. Once they finish the sandwich, we can look at that array, assess their score and then clear it for the next sandwich
             currentSandwich.push(activeIngredient)
-            console.log(ingredients[activeIngredient].element)
-            currentFrame.append(ingredients[activeIngredient].element.cloneNode(true))
+
+            currentCue.append(ingredients[activeIngredient].element.cloneNode(true))
             // let divIds = contentDivs[currentSlcObj]
             // console.log(divIds)
             // let divArray
