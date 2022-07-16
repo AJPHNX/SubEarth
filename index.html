@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang='en'>
-    
+
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,9 +16,9 @@
         <div id = 'container'>
             <header id="header">
                 <h1>SubEarth</h1>
-           
+
             <div id ="menuBoard">
-                <img src="./assets/images/MenuBoard.png" alt="Sandwich Menu Board" id="menuBoardImg">
+                <!-- <img src="./assets/images/MenuBoard.png" alt="Sandwich Menu Board" id="menuBoardImg"> -->
             </div>
         </header>
             <div id='game'>
@@ -26,33 +26,42 @@
                     <img src="./assets/images/BGImage.png" alt="shop background" id="bgImg">
                 </div>
                 <div id="customerOrderDiv" >
-                    
+
                     <div id='orderModal'></div>
-                    
+
                     <img src="./assets/images/Customer.png" alt="Customer" id="customer">
-                
+
                 </div>
-                
+
                 <div id="counterTop">
                     <img src="./assets/images/Counter.png" alt="counter top" id="counterImg">
                 </div>
                 <div id="emptyCue">
                     <div id="cueContainer">
-                        <iframe src="about:blank" id="frame1" class="cueFrame"></iframe>
+                        <div class="cueFrame" id="frame1"></div>
+                        <div class="cueFrame" id="frame2"></div>
+                        <div class="cueFrame" id="frame3"></div>
+                        <div class="cueFrame" id="frame4"></div>
+                        <div class="cueFrame" id="frame5"></div>
+                        <div class="cueFrame" id="frame6"></div>
+                        <div class="cueFrame" id="frame7"></div>
+                        <div class="cueFrame" id="frame8"></div>
+
+                        <!-- <iframe src="about:blank" id="frame1" class="cueFrame"></iframe>
                         <iframe src="about:blank" id="frame2" class="cueFrame"></iframe>
                         <iframe src="about:blank" id="frame3" class="cueFrame"></iframe>
                         <iframe src="about:blank" id="frame4" class="cueFrame"></iframe>
                         <iframe src="about:blank" id="frame5" class="cueFrame"></iframe>
                         <iframe src="about:blank" id="frame6" class="cueFrame"></iframe>
                         <iframe src="about:blank" id="frame7" class="cueFrame"></iframe>
-                        <iframe src="about:blank" id="frame8" class="cueFrame"></iframe>
+                        <iframe src="about:blank" id="frame8" class="cueFrame"></iframe> -->
                     </div>
                     <img src="./assets/images/EmptyCue.png" alt="Sandwich Cue" id="cueImg">
                 </div>
                 <div id="emptyFridge">
-                   
-                    <div id="fridgeCheeses">
-                        <div id="provoloneButtonWrap">
+
+                    <div id="fridgeCheeses" class="fridge-section">
+                        <!-- <div id="provoloneButtonWrap">
                             <img src="./assets/Sandwiches/images/ProvoloneSlice.png" alt="Provolone Button" id="provoloneButtonImg" class="fridgeButton">
                         </div>
                         <div id="swissButtonWrap">
@@ -60,11 +69,11 @@
                         </div>
                         <div id="americanButtonWrap">
                             <img src="./assets/Sandwiches/images/AmericanSlice.png" alt="American Button" id="americanButtonImg" class="fridgeButton">
-                        </div>
+                        </div> -->
                     </div>
-                    
-                    <div id="fridgeMeats">
-                        <div id="turkeyButtonWrap">
+
+                    <div id="fridgeMeats" class="fridge-section">
+                        <!-- <div id="turkeyButtonWrap">
                             <img src="./assets/Sandwiches/images/TurkeySlice.png" alt="Turkey Button" id="turkeyButtonImg" class="fridgeButton">
                         </div>
                         <div id="hamButtonWrap">
@@ -76,13 +85,13 @@
                         <div id="cappicolaButtonWrap">
                             <img src="./assets/Sandwiches/images/CappicolaSlice.png" alt="Cappicola Button" id="cappicolaButtonImg" class="fridgeButton">
                         </div>
-                        
+
                         <div id="salamiButtonWrap">
                             <img src="./assets/Sandwiches/images/SalamiSlice.png" alt="Salami Button" id="salamiButtonImg" class="fridgeButton">
                         </div>
                         <div id="pepperoniButtonWrap">
                             <img src="./assets/Sandwiches/images/PepperoniSlice.png" alt="Pepperoni Button" id="pepperoniButtonImg" class="fridgeButton">
-                        </div>
+                        </div> -->
                     </div>
                     <div id="showclickedFrideItem">[------------]</div>
                     <img src="./assets/images/FridgeEmpty.png" alt="Fridge Image" id="emptyFridgeImg">
@@ -96,9 +105,9 @@
                 </div>
                 <div id="breadBasketToggle">
                     <!-- <img src="./assets/images/BreadBasketToggle.png" alt="Bread Basket Toggle" id="breadBasketToggleImg"> -->
-                    <img src="./assets/images/BreadBasket.png" 
-                        onmouseover="this.src='./assets/images/BreadBasketToggle.png'" 
-                        onmouseout="this.src='./assets/images/BreadBasket.png'" 
+                    <img src="./assets/images/BreadBasket.png"
+                        onmouseover="this.src='./assets/images/BreadBasketToggle.png'"
+                        onmouseout="this.src='./assets/images/BreadBasket.png'"
                         id="breadBasketImg" alt="Bread Basket">
 
                 </div>
@@ -108,7 +117,7 @@
                 <div id="nextCustomerButton">
                     <img src="./assets/images/NextOrderButton.png" alt="Next Customer Button" id="nextCustomerButtonImg">
                 </div>
-                
+
             </div>
         </div>
         <script src="./assets/Logic.js"></script>

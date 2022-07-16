@@ -23,7 +23,7 @@ body{
     background-color: rgb(255, 255, 255);
     overflow: scroll;
     align-content: center;
-    
+
 }
 #header{
     display: flex;
@@ -54,7 +54,7 @@ h1{
     z-index:100;
 }
 #menuBoardImg{
-    width: 100%; 
+    width: 100%;
     height: auto;
 }
 #menuBoard {
@@ -66,7 +66,7 @@ h1{
     top: -215px;
     margin: auto;
     /* left: -200px; */
-    
+
     /* background-color:salmon; */
     /* visibility: hidden; */
 }
@@ -85,7 +85,7 @@ h1{
     overflow: hidden;
 }
 #nextCustomerButtonImg{
-    width: 100%; 
+    width: 100%;
     height: auto;
 }
 #nextCustomerButton {
@@ -99,7 +99,7 @@ h1{
     /* visibility: hidden; */
 }
 #sliceButtonImg{
-    width: 100%; 
+    width: 100%;
     height: auto;
 }
 #sliceButton {
@@ -113,7 +113,7 @@ h1{
     /* visibility: hidden; */
 }
 #shiftDurationImg {
-    width: 100%; 
+    width: 100%;
     height: auto;
 }
 #shiftDuration {
@@ -136,7 +136,7 @@ h1{
     background-color: rgb(255, 255, 255);
 }
 #timeModalImg{
-    width: 100%; 
+    width: 100%;
     height: auto;
 }
 #timeModal {
@@ -169,7 +169,7 @@ h1{
 
 }
 #emptyFridgeImg{
-    width: 100%; 
+    width: 100%;
     height: auto;
 }
 
@@ -198,8 +198,26 @@ h1{
     align-items: center;
     /* margin: 0; */
 }
+
+.fridge-section .fridgeButton {
+    max-width: 112px;
+    position: relative;
+}
+
+.fridge-section .fridgeButton h4 {
+    margin-bottom: 0;
+    color: white;
+    pointer-events: none;
+}
+
+.fridge-section .fridgeButton img {
+    width: 80%;
+    height: auto;
+    pointer-events: none;
+}
+
 #provoloneButtonImg{
-    width: 100%; 
+    width: 100%;
     height: auto;
 }
 #provoloneButtonWrap{
@@ -207,7 +225,7 @@ h1{
     height: auto;
 }
 #swissButtonImg{
-    width: 100%; 
+    width: 100%;
     height: auto;
 }
 #swissButtonWrap{
@@ -215,7 +233,7 @@ h1{
     height: auto;
 }
 #americanButtonImg{
-    width: 100%; 
+    width: 100%;
     height: auto;
 }
 #americanButtonWrap{
@@ -237,16 +255,16 @@ h1{
     /* margin: 0; */
 }
 #turkeyButtonImg{
-    width: 100%; 
+    width: 100%;
     height: auto;
 }
 #turkeyButtonWrap{
-    
+
     width: 90px;
     height: auto;
 }
 #hamButtonImg{
-    width: 100%; 
+    width: 100%;
     height: auto;
 }
 #hamButtonWrap{
@@ -254,7 +272,7 @@ h1{
     height: auto;
 }
 #cappicolaButtonImg{
-    width: 100%; 
+    width: 100%;
     height: auto;
 }
 #cappicolaButtonWrap{
@@ -262,7 +280,7 @@ h1{
     height: auto;
 }
 #prosciuttiniButtonImg{
-    width: 100%; 
+    width: 100%;
     height: auto;
 }
 #prosciuttiniButtonWrap{
@@ -270,7 +288,7 @@ h1{
     height: auto;
 }
 #salamiButtonImg{
-    width: 100%; 
+    width: 100%;
     height: auto;
 }
 #salamiButtonWrap{
@@ -278,7 +296,7 @@ h1{
     height: auto;
 }
 #pepperoniButtonImg{
-    width: 100%; 
+    width: 100%;
     height: auto;
 }
 #pepperoniButtonWrap{
@@ -286,7 +304,7 @@ h1{
     height: auto;
 }
 #breadBasketToggleImg{
-    width: 100%; 
+    width: 100%;
     height: auto;
 }
 .fridgeButton{
@@ -303,7 +321,7 @@ h1{
     /* visibility: hidden; */
 }
 #breadBasketImg{
-    width: 100%; 
+    width: 100%;
     height: auto;
 }
 #breadBasket {
@@ -317,7 +335,7 @@ h1{
     /* visibility: hidden; */
 }
 #cueImg{
-    width: 100%; 
+    width: 100%;
     height: auto;
 }
 #emptyCue {
@@ -340,10 +358,38 @@ h1{
     left: 0px;
     overflow: visible;
     padding-left: 3px;
-    
+
     /* background-color: rgba(red, green, blue, 0.5 ); */
     border-style: none;
 }
+.cueFrame .bread-base, .cueFrame .bread-top {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+.cueFrame .ingredient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.cueFrame .ingredient img {
+    position: absolute;
+    top: 0;
+    left: -10%;
+    width: 120%;
+    height: auto;
+}
+.cueFrame .ingredient img:nth-child(2) {
+    top: 28%;
+}
+.cueFrame .ingredient img:nth-child(3) {
+    top: 56%;
+}
+
 #cueContainer{
     display: inline-flex;
     position: absolute;
@@ -356,7 +402,7 @@ h1{
     /* visibility: hidden; */
 }
 #counterImg{
-    width: 100%; 
+    width: 100%;
     height: auto;
 }
 @keyframes customerMovementDefault {
@@ -397,7 +443,7 @@ h1{
     z-index: 1;
     width: 254px;
     height: auto;
-    
+
 }
 #customerOrderDiv:hover {
     animation-name: customerMovementDefault;
@@ -424,7 +470,7 @@ h1{
     overflow-wrap: break-word;
     justify-content: center;
     align-content: center;
-    margin: auto; 
+    margin: auto;
 }
 #orderModal ul{
     list-style: none;
@@ -438,7 +484,7 @@ h1{
     z-index: 0;
 }
 #bgImg{
-    width: 100%; 
-    height: auto; 
+    width: 100%;
+    height: auto;
     /* visibility: hidden; */
 }
