@@ -65,6 +65,8 @@ h1{
     z-index: 6;
     top: -215px;
     margin: auto;
+    text-align:center;
+    font: futura;
     /* left: -200px; */
 
     /* background-color:salmon; */
