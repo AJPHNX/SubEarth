@@ -52,32 +52,32 @@ const sandwichesDb = [
     {
         'id': 1,
         'title': 'Ham',
-        'ingredients': ['8', '4'],
+        'ingredients': ['1', '5'],
     },
     {
         'id': 2,
         'title': 'Club',
-        'ingredients': ['8', '4', '9']
+        'ingredients': ['1', '5', '4']
     },
     {
         'id': 3,
         'title': 'The Italian',
-        'ingredients': ['8', '4', '5', '2', '6', '4']
+        'ingredients': ['1', '5', '6', '7', '8', '9']
     },
     {
         'id': 4,
         'title': 'The Slamma',
-        'ingredients': ['8', '4', '5', '2']
+        'ingredients': ['1', '5', '6', '7']
     },
     {
         'id': 5,
         'title': 'Turkey',
-        'ingredients': ['8', '9']
+        'ingredients': ['1', '4']
     },
     {
         'id': 6,
         'title': 'Veggie',
-        'ingredients': ['8', '7']
+        'ingredients': ['1', '2']
     }
 ]
 
@@ -90,67 +90,69 @@ sandwichesDb.forEach( sandwich => {
 const ingredientsDb = [
     {
         'id': 1,
-        'title': 'American',
-        'slug': 'american',
-        'type': 'cheese',
-        'image': 'AmericanSlice.png'
-    },
-    {
-        'id': 2,
-        'title': 'Cappicola',
-        'slug': 'cappicola',
-        'type': 'meat',
-        'image': 'CappicolaSlice.png'
-    },
-    {
-        'id': 3,
-        'title': 'Ham', // Need solution for alt ham
-        'slug': 'ham',
-        'type': 'meat',
-        'image': 'HamSlice.png'
-    },
-    {
-        'id': 4,
-        'title': 'Pepperoni',
-        'slug': 'pepperoni',
-        'type': 'meat',
-        'image': 'PepperoniSlice.png'
-    },
-    {
-        'id': 5,
-        'title': 'Prosciuttini',
-        'slug': 'prosciuttini',
-        'type': 'meat',
-        'image': 'ProsciuttiniSlice.png'
-    },
-    {
-        'id': 6,
-        'title': 'Salami',
-        'slug': 'salami',
-        'type': 'meat',
-        'image': 'SalamiSlice.png'
-    },
-    {
-        'id': 7,
-        'title': 'Swiss',
-        'slug': 'swiss',
-        'type': 'cheese',
-        'image': 'SwissSlice.png'
-    },
-    {
-        'id': 8,
         'title': 'Provolone',
         'slug': 'provolone',
         'type': 'cheese',
         'image': 'ProvoloneSlice.png'
     },
     {
-        'id': 9,
+        'id': 2,
+        'title': 'Swiss',
+        'slug': 'swiss',
+        'type': 'cheese',
+        'image': 'SwissSlice.png'
+    },
+    {
+        'id': 3,
+        'title': 'American',
+        'slug': 'american',
+        'type': 'cheese',
+        'image': 'AmericanSlice.png'
+    },
+
+    {
+        'id': 4,
         'title': 'Turkey',
         'slug': 'turkey',
         'type': 'meat',
         'image': 'TurkeySlice.png'
+    },
+    {
+        'id': 5,
+        'title': 'Ham', // Need solution for alt ham
+        'slug': 'ham',
+        'type': 'meat',
+        'image': 'HamSlice.png'
+    },
+    {
+        'id': 6,
+        'title': 'Prosciuttini',
+        'slug': 'prosciuttini',
+        'type': 'meat',
+        'image': 'ProsciuttiniSlice.png'
+    },
+    {
+        'id': 7,
+        'title': 'Cappicola',
+        'slug': 'cappicola',
+        'type': 'meat',
+        'image': 'CappicolaSlice.png'
+    },
+    {
+        'id': 8,
+        'title': 'Salami',
+        'slug': 'salami',
+        'type': 'meat',
+        'image': 'SalamiSlice.png'
+    },
+    {
+        'id': 9,
+        'title': 'Pepperoni',
+        'slug': 'pepperoni',
+        'type': 'meat',
+        'image': 'PepperoniSlice.png'
     }
+ 
 ]
 
 const createIngredient = ingredientObj => {
